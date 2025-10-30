@@ -368,10 +368,10 @@ export default function Home() {
       new Locomotive({
         el: refScrollContainer.current ?? new HTMLElement(),
         smooth: true,
-        multiplier: 1,
+        multiplier: 0.8,
         class: "is-revealed",
         scrollbarContainer: false,
-        lerp: 0.1,
+        lerp: 0.08,
       });
     }
 
@@ -419,13 +419,14 @@ export default function Home() {
   useEffect(() => {
     const tilt: HTMLElement[] = Array.from(document.querySelectorAll("#tilt"));
     VanillaTilt.init(tilt, {
-      speed: 400,
-      glare: true,
-      "max-glare": 0.05,
+      speed: 300,
+      glare: false,
       gyroscope: false,
-      perspective: 1000,
-      scale: 0.95,
+      perspective: 800,
+      scale: 0.98,
       transition: true,
+      max: 15,
+      reset: true,
     });
   }, []);
 
@@ -553,17 +554,7 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1],
-                staggerChildren: 0.1,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
-            >
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
                   Core
@@ -590,7 +581,7 @@ export default function Home() {
                   </span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -720,17 +711,7 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1],
-                staggerChildren: 0.1,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
-            >
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
                   Services
@@ -757,7 +738,7 @@ export default function Home() {
                   </span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -769,17 +750,7 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1],
-                staggerChildren: 0.1,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
-            >
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
                   Technical
@@ -806,7 +777,7 @@ export default function Home() {
                   </span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -854,17 +825,7 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1],
-                staggerChildren: 0.1,
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
-            >
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
                   Career Focus &
@@ -891,7 +852,7 @@ export default function Home() {
                   </span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
