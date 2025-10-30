@@ -368,10 +368,17 @@ export default function Home() {
       new Locomotive({
         el: refScrollContainer.current ?? new HTMLElement(),
         smooth: true,
-        multiplier: 0.8,
+        multiplier: 0.5,
         class: "is-revealed",
         scrollbarContainer: false,
-        lerp: 0.08,
+        lerp: 0.05,
+        smartphone: {
+          smooth: false
+        },
+        tablet: {  
+          smooth: false,
+          breakpoint: 1024
+        }
       });
     }
 
@@ -419,13 +426,13 @@ export default function Home() {
   useEffect(() => {
     const tilt: HTMLElement[] = Array.from(document.querySelectorAll("#tilt"));
     VanillaTilt.init(tilt, {
-      speed: 300,
+      speed: 150,
       glare: false,
       gyroscope: false,
-      perspective: 800,
-      scale: 0.98,
+      perspective: 400,
+      scale: 1.005,
       transition: true,
-      max: 15,
+      max: 3,
       reset: true,
     });
   }, []);
