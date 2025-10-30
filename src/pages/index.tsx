@@ -72,34 +72,34 @@ const aboutStats = [
 
 const coreTechnologies = [
   {
-    title: "Artificial Intelligence",
-    description: "Intelligent systems for climate modeling",
-    icon: Brain,
+    title: "Product Management",
+    description: "Roadmapping, PRDs, A/B Testing, Feature Prioritization",
+    icon: Target,
   },
   {
-    title: "Machine Learning",
-    description: "Predictive models for climate patterns",
-    icon: BrainCircuit,
+    title: "Data Analytics",
+    description: "SQL, Power BI, Python, Data Visualization",
+    icon: BarChart3,
   },
   {
-    title: "Agentic AI",
-    description: "Autonomous climate action systems",
-    icon: Bot,
+    title: "Full-Stack Development",
+    description: "React, Node.js, MongoDB, C#, .NET",
+    icon: Code2,
   },
   {
-    title: "Computer Vision",
-    description: "Visual analysis of environmental data",
-    icon: Eye,
+    title: "UI/UX Design",
+    description: "Figma, User Research, Prototyping, Journey Mapping",
+    icon: Frame,
   },
   {
-    title: "Deep Learning",
-    description: "Complex pattern recognition",
-    icon: Network,
+    title: "Business Intelligence",
+    description: "Dashboard creation, KPI frameworks, Metric definition",
+    icon: TrendingUp,
   },
   {
-    title: "Generative AI",
-    description: "Creative climate solutions",
-    icon: Sparkles,
+    title: "Process Automation",
+    description: "Workflow optimization, System integration",
+    icon: Zap,
   },
 ];
 
@@ -563,11 +563,11 @@ export default function Home() {
                   Core
                   <br />
                   <span className="text-gradient clash-grotesk tracking-normal">
-                    Technologies
+                    Skills
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Our cutting-edge AI technologies power the future of climate intelligence.
+                  My expertise spans product management, data analytics, and full-stack development.
                 </p>
               </div>
               {coreTechnologies.map((tech) => (
