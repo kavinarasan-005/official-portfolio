@@ -73,32 +73,32 @@ const aboutStats = [
 const coreTechnologies = [
   {
     title: "Product Management",
-    description: "Roadmapping, PRDs, A/B Testing, Feature Prioritization",
+    description: "Strategic roadmapping, PRD creation, A/B testing frameworks, and data-driven feature prioritization for maximum business impact.",
     icon: Target,
   },
   {
     title: "Data Analytics",
-    description: "SQL, Power BI, Python, Data Visualization",
+    description: "Advanced SQL queries, Power BI dashboards, Python analysis, and data visualization to transform raw data into actionable insights.",
     icon: BarChart3,
   },
   {
     title: "Full-Stack Development",
-    description: "React, Node.js, MongoDB, C#, .NET",
+    description: "Modern web applications using React, Node.js, MongoDB, C#, and .NET with focus on scalability and performance optimization.",
     icon: Code2,
   },
   {
     title: "UI/UX Design",
-    description: "Figma, User Research, Prototyping, Journey Mapping",
+    description: "User-centered design with Figma, comprehensive user research, interactive prototyping, and customer journey mapping expertise.",
     icon: Frame,
   },
   {
     title: "Business Intelligence",
-    description: "Dashboard creation, KPI frameworks, Metric definition",
+    description: "Executive dashboard creation, KPI framework design, metric definition, and strategic reporting for data-driven decision making.",
     icon: TrendingUp,
   },
   {
     title: "Process Automation",
-    description: "Workflow optimization, System integration",
+    description: "Workflow optimization, system integration, ERP module development, and automation solutions to improve operational efficiency.",
     icon: Zap,
   },
 ];
@@ -439,12 +439,7 @@ export default function Home() {
 
   return (
     <Container>
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        ref={refScrollContainer}
-      >
+      <div ref={refScrollContainer}>
         <Gradient />
 
         {/* Hero Section */}
@@ -454,43 +449,13 @@ export default function Home() {
           className="mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
         >
           <div className={styles.intro}>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, staggerChildren: 0.1 }}
-              className="flex flex-row items-center space-x-1.5"
-            >
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className={styles.pill}
-              >
-                Product
-              </motion.span>
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className={styles.pill}
-              >
-                Analytics
-              </motion.span>
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.4 }}
-                className={styles.pill}
-              >
-                Development
-              </motion.span>
-            </motion.div>
+            <div className="flex flex-row items-center space-x-1.5">
+              <span className={styles.pill}>Product</span>
+              <span className={styles.pill}>Analytics</span>
+              <span className={styles.pill}>Development</span>
+            </div>
             <div>
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
+              <h1>
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
                   Hi, I'm Kavin Arasan
                   <br />
@@ -498,22 +463,12 @@ export default function Home() {
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
                   Product & Data Analyst
                 </span>
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
-              >
+              </h1>
+              <p className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl">
                 Passionate about turning data into decisions and insights into products. Building dashboards that uncover hidden trends and designing user experiences that drive behavior.
-              </motion.p>
+              </p>
             </div>
-            <motion.span 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-row items-center space-x-1.5 pt-6"
-            >
+            <span className="flex flex-row items-center space-x-1.5 pt-6">
               <Link href="#contact" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
@@ -525,7 +480,7 @@ export default function Home() {
               >
                 Learn More
               </Button>
-            </motion.span>
+            </span>
 
             <div
               className={cn(
@@ -537,17 +492,14 @@ export default function Home() {
               <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+          <div
             id={styles["canvas-container"]}
             className="mt-14 h-full w-full xl:mt-0"
           >
             <Suspense fallback={<div className="flex items-center justify-center h-full min-h-[400px]"><span className="text-muted-foreground">Loading 3D scene...</span></div>}>
               <Spline scene="/assets/scene.splinecode" />
             </Suspense>
-          </motion.div>
+          </div>
         </section>
 
         {/* About */}
@@ -598,12 +550,14 @@ export default function Home() {
               {coreTechnologies.map((tech) => (
                 <div
                   key={tech.title}
-                  className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
                 >
-                  <tech.icon className="my-6 text-primary" size={20} />
-                  <span className="text-lg tracking-tight text-foreground">
-                    {tech.title}
-                  </span>
+                  <div className="flex flex-col items-start">
+                    <tech.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {tech.title}
+                    </span>
+                  </div>
                   <span className="mt-2 tracking-tighter text-muted-foreground">
                     {tech.description}
                   </span>
@@ -755,12 +709,14 @@ export default function Home() {
               {solutions.map((solution) => (
                 <div
                   key={solution.service}
-                  className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
                 >
-                  <solution.icon className="my-6 text-primary" size={20} />
-                  <span className="text-lg tracking-tight text-foreground">
-                    {solution.service}
-                  </span>
+                  <div className="flex flex-col items-start">
+                    <solution.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {solution.service}
+                    </span>
+                  </div>
                   <span className="mt-2 tracking-tighter text-muted-foreground">
                     {solution.description}
                   </span>
@@ -794,12 +750,14 @@ export default function Home() {
               {technicalHighlights.map((tech) => (
                 <div
                   key={tech.title}
-                  className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
                 >
-                  <tech.icon className="my-6 text-primary" size={20} />
-                  <span className="text-lg tracking-tight text-foreground">
-                    {tech.title}
-                  </span>
+                  <div className="flex flex-col items-start">
+                    <tech.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {tech.title}
+                    </span>
+                  </div>
                   <span className="mt-2 tracking-tighter text-muted-foreground">
                     {tech.description}
                   </span>
@@ -869,12 +827,14 @@ export default function Home() {
               {careerFocus.map((trend) => (
                 <div
                   key={trend.title}
-                  className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
                 >
-                  <trend.icon className="my-6 text-primary" size={20} />
-                  <span className="text-lg tracking-tight text-foreground">
-                    {trend.title}
-                  </span>
+                  <div className="flex flex-col items-start">
+                    <trend.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {trend.title}
+                    </span>
+                  </div>
                   <span className="mt-2 tracking-tighter text-muted-foreground">
                     {trend.description}
                   </span>
@@ -1059,7 +1019,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </motion.div>
+      </div>
     </Container>
   );
 }
