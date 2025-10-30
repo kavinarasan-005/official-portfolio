@@ -607,13 +607,13 @@ export default function Home() {
           </div>
           <div data-scroll data-scroll-speed=".4" className="my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
-              ✨ Projects & Products
+              ✨ Featured Projects
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Revolutionary climate solutions.
+              Product & Analytics Portfolio.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Our innovative projects are transforming how we understand and respond to climate challenges.
+              A showcase of my work in product management, data analytics, and full-stack development with measurable impact.
             </p>
 
             {/* Carousel */}
@@ -781,7 +781,7 @@ export default function Home() {
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Cutting-edge AI technologies driving climate innovation.
+                  Key technical competencies and real-world experience that drive results.
                 </p>
               </div>
               {technicalHighlights.map((tech) => (
@@ -816,7 +816,7 @@ export default function Home() {
                 <span className="text-gradient clash-grotesk tracking-normal"> Studies</span>
               </h2>
               <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Real-world impact through AI-driven climate solutions.
+                Measurable achievements and impact from my projects and internships.
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -896,8 +896,8 @@ export default function Home() {
           >
             <div className="text-center">
               <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                What Our
-                <span className="text-gradient clash-grotesk tracking-normal"> Partners</span> Say
+                What
+                <span className="text-gradient clash-grotesk tracking-normal"> Colleagues</span> Say
               </h2>
             </div>
             <div className="grid gap-8 md:grid-cols-2">
@@ -1041,21 +1041,23 @@ export default function Home() {
             className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16 text-center xl:py-24"
           >
             <h2 className="text-4xl font-medium tracking-tighter xl:text-6xl">
-              Let&apos;s build a{" "}
-              <span className="text-gradient clash-grotesk">sustainable future.</span>
+              Let&apos;s{" "}
+              <span className="text-gradient clash-grotesk">collaborate.</span>
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Ready to collaborate on climate AI solutions? Get in touch with our team.
+              Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
             </p>
             <div className="mt-6 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-              <Link href="mailto:contact@climateai.org" passHref>
+              <Link href="mailto:kavinarasan2019@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline">
-                Download Brochure
-              </Button>
+              <Link href="/resume.pdf" target="_blank" passHref>
+                <Button variant="outline">
+                  Download Resume <FileText className="ml-1 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
