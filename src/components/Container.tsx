@@ -39,10 +39,10 @@ const variants = {
 const navLinks = [
   { href: "#home", text: "Home" },
   { href: "#about", text: "About" },
-  { href: "#technologies", text: "Technologies" },
+  { href: "#technologies", text: "Skills" },
   { href: "#projects", text: "Projects" },
-  { href: "#solutions", text: "Solutions" },
-  { href: "#careers", text: "Careers" },
+  { href: "#solutions", text: "Services" },
+  { href: "#careers", text: "Opportunities" },
   { href: "#contact", text: "Contact" },
 ];
 
@@ -85,8 +85,8 @@ export default function Container(props: ContainerProps) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "ClimateAI - AI for a Smarter, Sustainable Future",
-    description: `Pioneering the future of climate intelligence through cutting-edge AI research and innovation.`,
+    title: "Kavin Arasan - Product & Data Analyst Portfolio",
+    description: `Product & Data Analyst passionate about turning data into decisions and insights into products. Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior.`,
     image: "/assets/logo.webp",
     type: "website",
     ...customMeta,
