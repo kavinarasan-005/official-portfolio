@@ -103,39 +103,78 @@ const coreTechnologies = [
   },
 ];
 
-const projects = [
+// Product & Strategy Projects
+const productProjects = [
   {
     title: "CredPe",
     description: "Behavioral nudges for credit card payments using psychology. Improved task completion by 30% through A/B testing and user research.",
     image: "/assets/brainstack.webm",
     href: "https://credpe-pay-smartly-now.lovable.app",
+    category: "Product Strategy",
   },
   {
     title: "WellNest",
     description: "Mental wellness MVP for professionals. Top 10 finalist out of 200+ teams in ProductSpace Sprint with retention analytics.",
     image: "/assets/omnifood.webm",
     href: "https://indian-wellbeing-hub.lovable.app/welcome",
-  },
-  {
-    title: "Messo",
-    description: "MERN-based hostel mess management system for 500+ students. Reduced downtime by 30% with JWT auth and Redis caching.",
-    image: "/assets/portfolio.webm",
-    href: "https://github.com/krizto8/Messo/tree/main/Messo/Messo-main",
-  },
-];
-
-const projects1 = [
-  {
-    title: "IMDb Analytics",
-    description: "BI platform analyzing 9,000+ titles with Power BI dashboards. Processed Netflix/IMDb data for actionable business insights.",
-    image: "/assets/aichess.webm",
-    href: "https://github.com/kavinarasan-005/IMDB-Data-Analysis-and-Visualization",
+    category: "Product Design",
   },
   {
     title: "L'Oréal Challenge",
     description: "3-year inclusive sourcing roadmap with KPI design. Reached Quarter-Finals globally, modeled 3,000+ beneficiary growth.",
     image: "/assets/peter.webm",
     href: "https://www.canva.com/design/DAGw4g4SgQ0/qgY8XRsB5XXbOsOS88ZqNg/edit",
+    category: "Business Strategy",
+  },
+];
+
+// Development & Analytics Projects
+const developmentProjects = [
+  {
+    title: "Messo",
+    description: "MERN-based hostel mess management system for 500+ students. Reduced downtime by 30% with JWT auth and Redis caching.",
+    image: "/assets/portfolio.webm",
+    href: "https://github.com/krizto8/Messo/tree/main/Messo/Messo-main",
+    category: "Full-Stack Development",
+  },
+  {
+    title: "IMDb Analytics",
+    description: "BI platform analyzing 9,000+ titles with Power BI dashboards. Processed Netflix/IMDb data for actionable business insights.",
+    image: "/assets/aichess.webm",
+    href: "https://github.com/kavinarasan-005/IMDB-Data-Analysis-and-Visualization",
+    category: "Data Analytics",
+  },
+  {
+    title: "Vendor Expiry System",
+    description: "Windows Service in C# to monitor vendor contract expiries with automated email alerts. Improved SLA adherence and audit visibility.",
+    image: "/assets/portfolio.webm",
+    href: "https://github.com/kavinarasan-005/Vendor-Expiry-Notification-System",
+    category: "Process Automation",
+  },
+];
+
+// Design & UI/UX Projects
+const designProjects = [
+  {
+    title: "Food Delivery App",
+    description: "UX redesign focusing on sign-up flows, dynamic home, and live order tracking. Optimized user journeys for better conversion.",
+    image: "/assets/omnifood.webm",
+    href: "https://www.figma.com/design/u1NBlTGGgougpiGTePJGyn/Food-Delivery-App",
+    category: "UI/UX Design",
+  },
+  {
+    title: "Nike E-commerce",
+    description: "Nike-themed e-commerce prototype with clean browsing and optimized checkout flows. Streamlined cart journeys and inline validation.",
+    image: "/assets/brainstack.webm",
+    href: "https://www.figma.com/design/L7RcwZoZiTPB72ibuS5HU0/Nike-Website-Prototype",
+    category: "E-commerce Design",
+  },
+  {
+    title: "LUMINTRIQAI Platform",
+    description: "React.js landing page for AI/Blockchain consulting platform. Responsive design with component reusability and brand consistency.",
+    image: "/assets/aichess.webm",
+    href: "https://www.figma.com/design/Wz2EkcZVY47SggKG6SnTMU/Actual-Page",
+    category: "Frontend Development",
   },
 ];
 
@@ -337,6 +376,9 @@ export default function Home() {
         multiplier: 0.5,
         class: "is-revealed",
         scrollbarContainer: false,
+        scrollbarClass: 'c-scrollbar',
+        getDirection: true,
+        getSpeed: true,
         lerp: 0.05,
         smartphone: {
           smooth: false
@@ -470,7 +512,7 @@ export default function Home() {
 
         {/* About */}
         <section id="about" data-scroll-section>
-          <div className="my-14 flex max-w-6xl flex-col justify-start space-y-10">
+          <div className="my-16 flex max-w-6xl flex-col justify-start space-y-10">
             <h2 className="py-16 pb-2 text-4xl tracking-tighter leading-normal text-foreground xl:text-5xl">
               Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior and seeking internships in Product, Analytics, and Development starting January 2026. I enjoy collaborating across business and tech to make measurable impact through data-driven insights.
             </h2>
@@ -498,7 +540,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
+            className="my-16 flex flex-col justify-start space-y-10"
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
@@ -550,7 +592,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-scroll data-scroll-speed=".4" className="my-64">
+          <div data-scroll data-scroll-speed=".4" className="my-16">
             <span className="text-gradient clash-grotesk text-sm tracking-tighter">
               ✨ Featured Projects
             </span>
@@ -562,355 +604,383 @@ export default function Home() {
             </p>
 
             {/* Carousel */}
-            <div className="mt-14">
-              <Carousel setApi={setCarouselApi} className="w-full ">
-                <CarouselContent>
-                  {projects.map((project,index) => (
-                    <CarouselItem key={index} className="md:basis-1/3">
-                      <Card id="tilt">
-                        <CardHeader className="p-0">
-                          <Link href={project.href} target="_blank" passHref>
-                            {project.image.endsWith(".webm") ? (
-                              <video
-                                src={project.image}
-                                autoPlay
-                                loop
-                                muted
-                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover object-fill"
-                              />
-                            ) : (
-                              <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={600}
-                                height={300}
-                                quality={100}
-                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                              />
-                            )}
-                          </Link>
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter">
-                            {project.description}
-                          </CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
+            <div className="mt-14 space-y-12">
+              {/* Product & Strategy Projects */}
+              <div>
+                <h3 className="text-xl tracking-tighter text-foreground mb-6 flex items-center">
+                  <Target className="mr-2 text-primary" size={20} />
+                  Product & Strategy
+                </h3>
+                <Carousel setApi={setCarouselApi} className="w-full">
+                  <CarouselContent>
+                    {productProjects.map((project, index) => (
+                      <CarouselItem key={index} className="md:basis-1/3">
+                        <Card id="tilt">
+                          <CardHeader className="p-0">
+                            <Link href={project.href} target="_blank" passHref>
+                              {project.image.endsWith(".webm") ? (
+                                <video
+                                  src={project.image}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover object-fill"
+                                />
+                              ) : (
+                                <Image
+                                  src={project.image}
+                                  alt={project.title}
+                                  width={600}
+                                  height={300}
+                                  quality={100}
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                />
+                              )}
+                            </Link>
+                          </CardHeader>
+                          <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                            <div className="border-t border-white/5 p-4">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs text-primary font-medium">{project.category}</span>
+                              </div>
+                              <CardTitle className="text-base font-normal tracking-tighter">
+                                {project.description}
+                              </CardTitle>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
 
-              <div className="h-[4rem]"></div>
+              {/* Development & Analytics Projects */}
+              <div>
+                <h3 className="text-xl tracking-tighter text-foreground mb-6 flex items-center">
+                  <Code2 className="mr-2 text-primary" size={20} />
+                  Development & Analytics
+                </h3>
+                <Carousel setApi={setCarouselApi} className="w-full">
+                  <CarouselContent>
+                    {developmentProjects.map((project, index) => (
+                      <CarouselItem key={index} className="md:basis-1/3">
+                        <Card id="tilt">
+                          <CardHeader className="p-0">
+                            <Link href={project.href} target="_blank" passHref>
+                              {project.image.endsWith(".webm") ? (
+                                <video
+                                  src={project.image}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                />
+                              ) : (
+                                <Image
+                                  src={project.image}
+                                  alt={project.title}
+                                  width={600}
+                                  height={300}
+                                  quality={100}
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                />
+                              )}
+                            </Link>
+                          </CardHeader>
+                          <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                            <div className="border-t border-white/5 p-4">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs text-primary font-medium">{project.category}</span>
+                              </div>
+                              <CardTitle className="text-base font-normal tracking-tighter">
+                                {project.description}
+                              </CardTitle>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
 
-              <Carousel setApi={setCarouselApi} className="w-full ">
-                <CarouselContent>
-                  {projects1.map((project,index) => (
-                    <CarouselItem key={index} className="md:basis-1/3">
-                      <Card id="tilt">
-                        <CardHeader className="p-0">
-                          <Link href={project.href} target="_blank" passHref>
-                            {project.image.endsWith(".webm") ? (
-                              <video
-                                src={project.image}
-                                autoPlay
-                                loop
-                                muted
-                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                              />
-                            ) : (
-                              <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={600}
-                                height={300}
-                                quality={100}
-                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                              />
-                            )}
-                          </Link>
-                        </CardHeader>
-                        <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
-                          <CardTitle className="border-t border-white/5 p-4 text-base font-normal tracking-tighter">
-                            {project.description}
-                          </CardTitle>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-              <div className="py-2 text-center text-sm text-muted-foreground">
-                <span className="font-semibold">Scroll Horizontally</span>
+              {/* Design & UI/UX Projects */}
+              <div>
+                <h3 className="text-xl tracking-tighter text-foreground mb-6 flex items-center">
+                  <Frame className="mr-2 text-primary" size={20} />
+                  Design & UI/UX
+                </h3>
+                <Carousel setApi={setCarouselApi} className="w-full">
+                  <CarouselContent>
+                    {designProjects.map((project, index) => (
+                      <CarouselItem key={index} className="md:basis-1/3">
+                        <Card id="tilt">
+                          <CardHeader className="p-0">
+                            <Link href={project.href} target="_blank" passHref>
+                              {project.image.endsWith(".webm") ? (
+                                <video
+                                  src={project.image}
+                                  autoPlay
+                                  loop
+                                  muted
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                />
+                              ) : (
+                                <Image
+                                  src={project.image}
+                                  alt={project.title}
+                                  width={600}
+                                  height={300}
+                                  quality={100}
+                                  className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                                />
+                              )}
+                            </Link>
+                          </CardHeader>
+                          <CardContent className="absolute bottom-0 w-full bg-background/50 backdrop-blur">
+                            <div className="border-t border-white/5 p-4">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-xs text-primary font-medium">{project.category}</span>
+                              </div>
+                              <CardTitle className="text-base font-normal tracking-tighter">
+                                {project.description}
+                              </CardTitle>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
               </div>
             </div>
           </div>
         </section>
 
-        {/* AI-Powered Solutions */}
-        <section id="solutions" data-scroll-section>
+        {/* Expertise & Approach */}
+        <section id="expertise" data-scroll-section>
           <div
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
+            className="my-16 flex flex-col justify-start space-y-10"
           >
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid items-start gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl tracking-tighter">
-                  Services
+                  Expertise &
                   <br />
                   <span className="text-gradient clash-grotesk">
-                    I Offer
+                    Approach
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tight text-secondary-foreground">
-                  Professional development services to bring your ideas to life.
+                  Combining technical skills with strategic thinking for measurable business impact.
                 </p>
               </div>
-              {solutions.map((solution) => (
-                <div
-                  key={solution.service}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <solution.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tighter text-foreground">
-                      {solution.service}
-                    </span>
-                  </div>
-                  <span className="mt-2 tracking-tight text-muted-foreground">
-                    {solution.description}
+              
+              {/* Product Strategy & Impact */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Target className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Product Strategy & Impact
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technical Highlights */}
-        <section id="technical" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
-              <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl tracking-tighter">
-                  Technical
-                  <br />
-                  <span className="text-gradient clash-grotesk">
-                    Highlights
-                  </span>
-                </h2>
-                <p className="mt-2 tracking-tight text-secondary-foreground">
-                  Key technical competencies and real-world experience that drive results.
-                </p>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  A/B testing frameworks, user research, strategic roadmapping, and data-driven feature prioritization for measurable business growth.
+                </span>
+                <div className="mt-4 text-xs text-primary font-medium">
+                  30% task completion improvement • Top 10 ProductSpace finalist
+                </div>
               </div>
-              {technicalHighlights.map((tech) => (
-                <div
-                  key={tech.title}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <tech.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tighter text-foreground">
-                      {tech.title}
-                    </span>
-                  </div>
-                  <span className="mt-2 tracking-tight text-muted-foreground">
-                    {tech.description}
+
+              {/* Data Analytics & Intelligence */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <BarChart3 className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Data Analytics & Intelligence
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* AI Trends */}
-        <section id="trends" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
-              <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl tracking-tighter">
-                  Career Focus &
-                  <br />
-                  <span className="text-gradient clash-grotesk">
-                    Expertise
-                  </span>
-                </h2>
-                <p className="mt-2 tracking-tight text-secondary-foreground">
-                  Areas where I deliver the most impact through data-driven solutions and user-centered design.
-                </p>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  Power BI dashboards, SQL optimization, KPI frameworks, and Python analysis that transform complex data into actionable business insights.
+                </span>
+                <div className="mt-4 text-xs text-primary font-medium">
+                  9,000+ titles analyzed • 40% manual task reduction
+                </div>
               </div>
-              {careerFocus.map((trend) => (
-                <div
-                  key={trend.title}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <trend.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tighter text-foreground">
-                      {trend.title}
-                    </span>
-                  </div>
-                  <span className="mt-2 tracking-tight text-muted-foreground">
-                    {trend.description}
+
+              {/* Full-Stack Development */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Code2 className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Full-Stack Development
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-
-
-        {/* Working Principles */}
-        <section id="benefits" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
-              <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl tracking-tighter">
-                  How I
-                  <br />
-                  <span className="text-gradient clash-grotesk">
-                    Work
-                  </span>
-                </h2>
-                <p className="mt-2 tracking-tight text-secondary-foreground">
-                  Core principles and methodologies that guide my professional approach.
-                </p>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  MERN stack applications, C# .NET solutions, and scalable systems with focus on performance optimization and user experience.
+                </span>
+                <div className="mt-4 text-xs text-primary font-medium">
+                  500+ students served • JWT & Redis implementation
+                </div>
               </div>
-              {workingPrinciples.map((benefit) => (
-                <div
-                  key={benefit.title}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <benefit.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tighter text-foreground">
-                      {benefit.title}
-                    </span>
-                  </div>
-                  <span className="mt-2 tracking-tight text-muted-foreground">
-                    {benefit.description}
+
+              {/* UX Design & Research */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Frame className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    UX Design & Research
                   </span>
                 </div>
-              ))}
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  User interviews, journey mapping, behavioral analysis, and Figma prototyping for conversion-focused digital experiences.
+                </span>
+                <div className="mt-4 text-xs text-primary font-medium">
+                  Quarter-Finals L'Oréal Challenge • Conversion optimization
+                </div>
+              </div>
+
+              {/* Data-Driven Decision Making */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <BarChart3 className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Data-Driven Methodology
+                  </span>
+                </div>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  Every decision backed by metrics and analytics. Using A/B testing and user behavior analysis to validate assumptions and optimize outcomes.
+                </span>
+              </div>
+
+              {/* Cross-Functional Collaboration */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Globe className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Collaborative Leadership
+                  </span>
+                </div>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  Bridging business, design, and engineering teams. Thriving in cross-functional environments to solve complex challenges with diverse perspectives.
+                </span>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact */}
-        <section id="contact" data-scroll-section className="my-32">
+        <section id="contact" data-scroll-section>
           <div
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="flex flex-col justify-start space-y-12"
+            className="my-16 flex flex-col justify-start space-y-16"
           >
             {/* Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-6xl tracking-tighter xl:text-7xl mb-4">
+            <div className="text-center">
+              <span className="text-gradient clash-grotesk text-sm tracking-tighter">
+                ✨ Get In Touch
+              </span>
+              <h2 className="mt-3 text-4xl tracking-tighter xl:text-6xl">
                 Let&apos;s{" "}
                 <span className="text-gradient clash-grotesk">collaborate.</span>
               </h2>
-              <p className="text-lg tracking-tight text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg max-w-2xl mx-auto">
                 Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
               </p>
             </div>
 
-            {/* Contact Grid - Matching website style */}
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-16">
-              {contactInfo.map((contact) => (
-                <div
-                  key={contact.city}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[200px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <contact.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tighter text-foreground">
-                      {contact.city}
-                    </span>
+            {/* Main Contact Content */}
+            <div className="max-w-4xl mx-auto w-full">
+              {/* Quick Contact Links */}
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-12">
+                <Link href="mailto:kavinarasan2019@gmail.com" className="group">
+                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
+                    <div className="flex flex-col items-start">
+                      <Mail className="mb-3 text-primary" size={20} />
+                      <span className="text-sm font-medium tracking-tighter text-foreground">Email</span>
+                    </div>
+                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">kavinarasan2019@gmail.com</span>
                   </div>
-                  <div className="mt-2">
-                    <p className="tracking-tight text-muted-foreground mb-2 text-sm">{contact.address}</p>
-                    {contact.city === "Resume" ? (
-                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm">
-                        {contact.email}
-                      </Link>
-                    ) : contact.city === "LinkedIn" ? (
-                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm">
-                        {contact.email}
-                      </Link>
-                    ) : contact.city === "GitHub" ? (
-                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm">
-                        {contact.email}
-                      </Link>
-                    ) : (
-                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm">
-                        {contact.email}
-                      </Link>
-                    )}
+                </Link>
+                
+                <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="group">
+                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
+                    <div className="flex flex-col items-start">
+                      <Linkedin className="mb-3 text-primary" size={20} />
+                      <span className="text-sm font-medium tracking-tighter text-foreground">LinkedIn</span>
+                    </div>
+                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">Connect professionally</span>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Seeking Opportunities - Clean section */}
-            <div className="text-center mb-12">
-              <h3 className="text-3xl tracking-tighter mb-4">
-                Currently Seeking
-                <span className="text-gradient clash-grotesk"> Opportunities</span>
-              </h3>
-              <p className="text-muted-foreground mb-8 tracking-tight">
-                Available for internships starting January 2026 in these areas
-              </p>
-              
-              {/* Clean horizontal tags */}
-              <div className="flex flex-wrap justify-center gap-3 mb-12">
-                {opportunities.map((career, index) => (
-                  <div
-                    key={career.title}
-                    className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-primary/30"
-                  >
-                    <career.icon className="text-primary" size={16} />
-                    <span className="text-foreground text-sm font-medium">{career.title.replace(' Intern', '')}</span>
-                    <span className="text-xs text-muted-foreground">({career.location})</span>
+                </Link>
+                
+                <Link href="https://github.com/kavinarasan-005" target="_blank" className="group">
+                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
+                    <div className="flex flex-col items-start">
+                      <Code2 className="mb-3 text-primary" size={20} />
+                      <span className="text-sm font-medium tracking-tighter text-foreground">GitHub</span>
+                    </div>
+                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">View my code</span>
                   </div>
-                ))}
+                </Link>
+                
+                <Link href="/resume.pdf" target="_blank" className="group">
+                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
+                    <div className="flex flex-col items-start">
+                      <FileText className="mb-3 text-primary" size={20} />
+                      <span className="text-sm font-medium tracking-tighter text-foreground">Resume</span>
+                    </div>
+                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">Download PDF</span>
+                  </div>
+                </Link>
               </div>
 
-              {/* Single Call to Action */}
-              <div className="flex flex-col items-center space-y-4">
+              {/* Opportunities Section */}
+              <div className="text-center rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:bg-white/10 hover:shadow-md">
+                <h3 className="text-2xl tracking-tighter mb-3">
+                  Currently Seeking
+                  <span className="text-gradient clash-grotesk"> Opportunities</span>
+                </h3>
+                <p className="text-muted-foreground mb-6 tracking-tight">
+                  Available for internships starting January 2026
+                </p>
+                
+                {/* Opportunity Tags */}
+                <div className="flex flex-wrap justify-center gap-2 mb-8">
+                  {opportunities.map((career, index) => (
+                    <div
+                      key={career.title}
+                      className="flex items-center space-x-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-xs transition-all duration-300 hover:bg-primary/20"
+                    >
+                      <career.icon className="text-primary" size={14} />
+                      <span className="text-foreground font-medium">{career.title.replace(' Intern', '')}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Location Info */}
+                <div className="flex items-center justify-center space-x-2 mb-6 text-sm text-muted-foreground">
+                  <MapPin className="text-primary" size={16} />
+                  <span>Based in Dubai, UAE • Available for Remote & On-site Work</span>
+                </div>
+
+                {/* CTA Button */}
                 <Link href="mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity" passHref>
-                  <Button size="lg" className="px-8 py-3 text-lg font-medium">
+                  <Button size="lg" className="px-8 py-3 text-base font-medium">
                     Start a Conversation <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <p className="text-sm text-muted-foreground">
-                  Or download my{" "}
-                  <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline font-medium">
-                    resume
-                  </Link>{" "}
-                  for detailed information
-                </p>
               </div>
             </div>
           </div>

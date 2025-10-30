@@ -41,8 +41,7 @@ const navLinks = [
   { href: "#about", text: "About" },
   { href: "#technologies", text: "Skills" },
   { href: "#projects", text: "Projects" },
-  { href: "#solutions", text: "Services" },
-  { href: "#careers", text: "Opportunities" },
+  { href: "#expertise", text: "Expertise" },
   { href: "#contact", text: "Contact" },
 ];
 
@@ -223,7 +222,7 @@ export default function Container(props: ContainerProps) {
                 {/* Footer */}
                 <div className="flex min-h-fit w-full flex-col space-y-8 px-[22px] py-10">
                   <span className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} ClimateAI. All rights reserved.
+                    Made with ❤️ by Kavin Arasan | Local time: {new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Dubai', hour12: true, hour: '2-digit', minute: '2-digit' })} UTC+4 | kavinarasan2019@gmail.com
                   </span>
                 </div>
               </div>

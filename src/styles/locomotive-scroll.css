@@ -1,1 +1,29 @@
 html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}.lenis.lenis-stopped{overflow:hidden}.lenis.lenis-scrolling iframe{pointer-events:none}
+
+/* Hide scrollbar */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+/* Hide locomotive scroll scrollbar */
+.c-scrollbar {
+  display: none !important;
+}
+
+.c-scrollbar_thumb {
+  display: none !important;
+}
