@@ -317,19 +317,6 @@ const workingPrinciples = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Kavin's analytical mindset and technical skills made him invaluable to our IT operations. His Power BI dashboards transformed how we view and manage our service requests.",
-    author: "IT Leadership Team",
-    company: "Eros Group, Dubai",
-  },
-  {
-    quote: "Outstanding work on the ERP modules. Kavin's attention to detail and systematic approach significantly improved our operational efficiency.",
-    author: "Senior Manager",
-    company: "Crossword ERP Division",
-  },
-];
-
 export default function Home() {
   const refScrollContainer = useRef(null);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -782,41 +769,6 @@ export default function Home() {
                     {trend.description}
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section id="testimonials" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                What
-                <span className="text-gradient clash-grotesk tracking-normal"> Colleagues</span> Say
-              </h2>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2">
-              {testimonials.map((testimonial) => (
-                <Card key={testimonial.author} className="bg-white/5 backdrop-blur">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Star className="text-primary mt-1" size={20} />
-                      <div>
-                        <p className="text-lg italic">"{testimonial.quote}"</p>
-                        <div className="mt-4">
-                          <p className="font-semibold">{testimonial.author}</p>
-                          <p className="text-muted-foreground">{testimonial.company}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               ))}
             </div>
           </div>
