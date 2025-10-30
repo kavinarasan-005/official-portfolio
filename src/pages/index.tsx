@@ -228,27 +228,6 @@ const careerFocus = [
   },
 ];
 
-const caseStudies = [
-  {
-    title: "CredPe Behavioral Design",
-    description: "Designed credit card payment experience using behavioral psychology and Fogg's Behavior Model to reduce procrastination.",
-    metric: "↑30% completion rate",
-    icon: TrendingUp,
-  },
-  {
-    title: "Eros IT Dashboard Impact",
-    description: "Built Power BI dashboards analyzing 1,000+ IT service requests to optimize support efficiency for senior leadership.",
-    metric: "↓40% manual tasks",
-    icon: Activity,
-  },
-  {
-    title: "Messo System Optimization",
-    description: "Developed MERN-based hostel management system with JWT auth and Redis caching serving 500+ students daily.",
-    metric: "↓30% system downtime",
-    icon: Globe2,
-  },
-];
-
 const contactInfo = [
   {
     city: "Dubai, UAE",
@@ -762,42 +741,6 @@ export default function Home() {
                     {tech.description}
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Studies */}
-        <section id="case-studies" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                Case
-                <span className="text-gradient clash-grotesk tracking-normal"> Studies</span>
-              </h2>
-              <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Measurable achievements and impact from my projects and internships.
-              </p>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {caseStudies.map((study) => (
-                <Card key={study.title} className="bg-white/5 backdrop-blur">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <study.icon className="text-primary" size={24} />
-                      <span className="text-gradient font-semibold">{study.metric}</span>
-                    </div>
-                    <CardTitle className="text-xl">{study.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{study.description}</p>
-                  </CardContent>
-                </Card>
               ))}
             </div>
           </div>
