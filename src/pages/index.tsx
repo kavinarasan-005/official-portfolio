@@ -471,7 +471,7 @@ export default function Home() {
         {/* About */}
         <section id="about" data-scroll-section>
           <div className="my-14 flex max-w-6xl flex-col justify-start space-y-10">
-            <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
+            <h2 className="py-16 pb-2 text-4xl tracking-tighter leading-normal text-foreground xl:text-5xl">
               Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior and seeking internships in Product, Analytics, and Development starting January 2026. I enjoy collaborating across business and tech to make measurable impact through data-driven insights.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
@@ -502,14 +502,14 @@ export default function Home() {
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
+                <h2 className="text-4xl tracking-tighter">
                   Core
                   <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
+                  <span className="text-gradient clash-grotesk">
                     Skills
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                <p className="mt-2 tracking-tight text-secondary-foreground">
                   My expertise spans product management, data analytics, and full-stack development.
                 </p>
               </div>
@@ -520,11 +520,11 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <tech.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {tech.title}
                     </span>
                   </div>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                  <span className="mt-2 tracking-tight text-muted-foreground">
                     {tech.description}
                   </span>
                 </div>
@@ -551,10 +551,10 @@ export default function Home() {
             </div>
           </div>
           <div data-scroll data-scroll-speed=".4" className="my-64">
-            <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
+            <span className="text-gradient clash-grotesk text-sm tracking-tighter">
               ✨ Featured Projects
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-4xl tracking-tighter xl:text-6xl">
               Product & Analytics Portfolio.
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
@@ -661,14 +661,14 @@ export default function Home() {
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
+                <h2 className="text-4xl tracking-tighter">
                   Services
                   <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
+                  <span className="text-gradient clash-grotesk">
                     I Offer
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                <p className="mt-2 tracking-tight text-secondary-foreground">
                   Professional development services to bring your ideas to life.
                 </p>
               </div>
@@ -679,11 +679,11 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <solution.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {solution.service}
                     </span>
                   </div>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                  <span className="mt-2 tracking-tight text-muted-foreground">
                     {solution.description}
                   </span>
                 </div>
@@ -702,14 +702,14 @@ export default function Home() {
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
+                <h2 className="text-4xl tracking-tighter">
                   Technical
                   <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
+                  <span className="text-gradient clash-grotesk">
                     Highlights
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                <p className="mt-2 tracking-tight text-secondary-foreground">
                   Key technical competencies and real-world experience that drive results.
                 </p>
               </div>
@@ -720,11 +720,11 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <tech.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {tech.title}
                     </span>
                   </div>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                  <span className="mt-2 tracking-tight text-muted-foreground">
                     {tech.description}
                   </span>
                 </div>
@@ -743,14 +743,14 @@ export default function Home() {
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
+                <h2 className="text-4xl tracking-tighter">
                   Career Focus &
                   <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
+                  <span className="text-gradient clash-grotesk">
                     Expertise
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                <p className="mt-2 tracking-tight text-secondary-foreground">
                   Areas where I deliver the most impact through data-driven solutions and user-centered design.
                 </p>
               </div>
@@ -761,11 +761,11 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <trend.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {trend.title}
                     </span>
                   </div>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                  <span className="mt-2 tracking-tight text-muted-foreground">
                     {trend.description}
                   </span>
                 </div>
@@ -786,14 +786,14 @@ export default function Home() {
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
+                <h2 className="text-4xl tracking-tighter">
                   How I
                   <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
+                  <span className="text-gradient clash-grotesk">
                     Work
                   </span>
                 </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                <p className="mt-2 tracking-tight text-secondary-foreground">
                   Core principles and methodologies that guide my professional approach.
                 </p>
               </div>
@@ -804,11 +804,11 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <benefit.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {benefit.title}
                     </span>
                   </div>
-                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                  <span className="mt-2 tracking-tight text-muted-foreground">
                     {benefit.description}
                   </span>
                 </div>
@@ -827,7 +827,7 @@ export default function Home() {
           >
             {/* Header */}
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-medium tracking-tighter xl:text-7xl mb-4">
+              <h2 className="text-6xl tracking-tighter xl:text-7xl mb-4">
                 Let&apos;s{" "}
                 <span className="text-gradient clash-grotesk">collaborate.</span>
               </h2>
@@ -845,12 +845,12 @@ export default function Home() {
                 >
                   <div className="flex flex-col items-start">
                     <contact.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+                    <span className="text-lg tracking-tighter text-foreground">
                       {contact.city}
                     </span>
                   </div>
                   <div className="mt-2">
-                    <p className="tracking-tighter text-muted-foreground mb-2 text-sm">{contact.address}</p>
+                    <p className="tracking-tight text-muted-foreground mb-2 text-sm">{contact.address}</p>
                     {contact.city === "Resume" ? (
                       <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm">
                         {contact.email}
@@ -875,11 +875,11 @@ export default function Home() {
 
             {/* Seeking Opportunities - Clean section */}
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-medium tracking-tight mb-4">
+              <h3 className="text-3xl tracking-tighter mb-4">
                 Currently Seeking
                 <span className="text-gradient clash-grotesk"> Opportunities</span>
               </h3>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-8 tracking-tight">
                 Available for internships starting January 2026 in these areas
               </p>
               
