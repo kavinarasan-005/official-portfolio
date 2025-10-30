@@ -195,56 +195,56 @@ const technicalHighlights = [
   },
 ];
 
-const aiTrends = [
+const careerFocus = [
   {
-    title: "Multimodal AI",
-    description: "Advanced AI systems that process and understand multiple types of data simultaneously - text, images, audio, and video - creating more human-like intelligence.",
-    icon: Globe,
+    title: "Product Management",
+    description: "Roadmapping, user research, A/B testing, and feature prioritization using data-driven frameworks for measurable business impact.",
+    icon: Target,
   },
   {
-    title: "Agentic Systems",
-    description: "Autonomous AI agents that can plan, reason, and take actions independently to achieve complex goals, revolutionizing automation and decision-making.",
-    icon: Bot,
+    title: "Business Analytics",
+    description: "SQL optimization, dashboard creation, KPI design, and cohort analysis to turn complex data into strategic insights.",
+    icon: BarChart3,
   },
   {
-    title: "Edge AI",
-    description: "Bringing AI processing power directly to devices and sensors, enabling real-time intelligence with reduced latency and enhanced privacy protection.",
-    icon: Smartphone,
+    title: "Full-Stack Development",
+    description: "Modern web applications using React, Node.js, and cloud deployment with focus on scalability and user experience.",
+    icon: Code2,
   },
   {
-    title: "AI for Robotics",
-    description: "Intelligent robotic systems powered by advanced AI algorithms, enabling sophisticated manipulation, navigation, and human-robot collaboration.",
-    icon: Server,
+    title: "UX Research & Design",
+    description: "User interviews, behavioral analysis, prototyping, and conversion optimization through evidence-based design decisions.",
+    icon: Frame,
   },
   {
-    title: "AI Explainability",
-    description: "Making AI decision-making processes transparent and interpretable, building trust and enabling responsible AI deployment in critical applications.",
-    icon: Shield,
+    title: "Process Automation",
+    description: "Workflow optimization, ERP development, and system integration to eliminate manual tasks and improve efficiency.",
+    icon: Zap,
   },
   {
-    title: "Sustainable AI",
-    description: "Developing energy-efficient AI models and responsible practices that minimize environmental impact while maximizing societal benefits.",
-    icon: Leaf,
+    title: "Data Visualization",
+    description: "Power BI, Tableau, and Python-based dashboards that communicate complex insights through compelling visual narratives.",
+    icon: Activity,
   },
 ];
 
 const caseStudies = [
   {
-    title: "Crop Yield Prediction",
-    description: "Advanced machine learning models analyzing satellite imagery, weather patterns, and soil data to predict crop yields with unprecedented accuracy.",
-    metric: "↑92% accuracy",
+    title: "CredPe Behavioral Design",
+    description: "Designed credit card payment experience using behavioral psychology and Fogg's Behavior Model to reduce procrastination.",
+    metric: "↑30% completion rate",
     icon: TrendingUp,
   },
   {
-    title: "Urban Heat Index Forecast",
-    description: "Real-time urban climate monitoring system using IoT sensors and AI algorithms to predict heat island effects and optimize city planning.",
-    metric: "↓40% model latency",
+    title: "Eros IT Dashboard Impact",
+    description: "Built Power BI dashboards analyzing 1,000+ IT service requests to optimize support efficiency for senior leadership.",
+    metric: "↓40% manual tasks",
     icon: Activity,
   },
   {
-    title: "Flood Risk Modeling",
-    description: "Comprehensive flood prediction system combining hydrological data, topography, and climate models to enhance disaster preparedness.",
-    metric: "↑30% response window",
+    title: "Messo System Optimization",
+    description: "Developed MERN-based hostel management system with JWT auth and Redis caching serving 500+ students daily.",
+    metric: "↓30% system downtime",
     icon: Globe2,
   },
 ];
@@ -858,17 +858,17 @@ export default function Home() {
             >
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
-                  AI Trends &
+                  Career Focus &
                   <br />
                   <span className="text-gradient clash-grotesk tracking-normal">
-                    Insights
+                    Expertise
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  The latest developments in AI technology and their climate applications.
+                  Areas where I deliver the most impact through data-driven solutions and user-centered design.
                 </p>
               </div>
-              {aiTrends.map((trend) => (
+              {careerFocus.map((trend) => (
                 <div
                   key={trend.title}
                   className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
