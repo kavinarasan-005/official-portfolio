@@ -782,31 +782,37 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                Get In
-                <span className="text-gradient clash-grotesk tracking-normal"> Touch</span>
-              </h2>
-              <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Let's connect and explore opportunities to work together.
-              </p>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="flex flex-col py-6 xl:p-6">
+                <h2 className="text-4xl font-medium tracking-tight">
+                  Get In
+                  <br />
+                  <span className="text-gradient clash-grotesk tracking-normal">
+                    Touch
+                  </span>
+                </h2>
+                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                  Let's connect and explore opportunities to work together.
+                </p>
+              </div>
               {contactInfo.map((office) => (
-                <Card key={office.city} className="bg-white/5 backdrop-blur">
-                  <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <office.icon className="text-primary" size={20} />
-                      <CardTitle className="text-lg">{office.city}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">{office.address}</p>
-                    <Link href={`mailto:${office.email}`} className="text-primary hover:underline">
+                <div
+                  key={office.city}
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
+                >
+                  <div className="flex flex-col items-start">
+                    <office.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {office.city}
+                    </span>
+                  </div>
+                  <div className="mt-2">
+                    <p className="tracking-tighter text-muted-foreground mb-4">{office.address}</p>
+                    <Link href={`mailto:${office.email}`} className="text-primary hover:underline text-sm">
                       {office.email}
                     </Link>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -863,23 +869,34 @@ export default function Home() {
             data-scroll-position="top"
             className="my-24 flex flex-col justify-start space-y-10"
           >
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                How I
-                <span className="text-gradient clash-grotesk tracking-normal"> Work</span>
-              </h2>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="flex flex-col py-6 xl:p-6">
+                <h2 className="text-4xl font-medium tracking-tight">
+                  How I
+                  <br />
+                  <span className="text-gradient clash-grotesk tracking-normal">
+                    Work
+                  </span>
+                </h2>
+                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                  Core principles and methodologies that guide my professional approach.
+                </p>
+              </div>
               {workingPrinciples.map((benefit) => (
-                <Card key={benefit.title} className="bg-white/5 backdrop-blur">
-                  <CardHeader>
-                    <benefit.icon className="text-primary mb-2" size={24} />
-                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{benefit.description}</p>
-                  </CardContent>
-                </Card>
+                <div
+                  key={benefit.title}
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
+                >
+                  <div className="flex flex-col items-start">
+                    <benefit.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {benefit.title}
+                    </span>
+                  </div>
+                  <span className="mt-2 tracking-tighter text-muted-foreground">
+                    {benefit.description}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
