@@ -105,37 +105,37 @@ const coreTechnologies = [
 
 const projects = [
   {
-    title: "ClimateTwin",
-    description: "AI-Powered Digital Climate Twins - Real-time virtual replicas of geographic regions for scenario modeling and risk testing.",
+    title: "CredPe",
+    description: "Behavioral nudges for credit card payments using psychology. Improved task completion by 30% through A/B testing and user research.",
     image: "/assets/brainstack.webm",
-    href: "#",
+    href: "https://credpe-pay-smartly-now.lovable.app",
   },
   {
-    title: "VisionEarth",
-    description: "Satellite-AI Fusion for Ecosystem Monitoring - Tracks environmental change with multispectral imaging and CV pipelines.",
+    title: "WellNest",
+    description: "Mental wellness MVP for professionals. Top 10 finalist out of 200+ teams in ProductSpace Sprint with retention analytics.",
     image: "/assets/omnifood.webm",
-    href: "#",
+    href: "https://indian-wellbeing-hub.lovable.app/welcome",
   },
   {
-    title: "GreenMind",
-    description: "Low-Energy AI for Smart Agriculture - Edge-deployed ML models optimizing water usage, soil health, and yield.",
+    title: "Messo",
+    description: "MERN-based hostel mess management system for 500+ students. Reduced downtime by 30% with JWT auth and Redis caching.",
     image: "/assets/portfolio.webm",
-    href: "#",
+    href: "https://github.com/krizto8/Messo/tree/main/Messo/Messo-main",
   },
 ];
 
 const projects1 = [
   {
-    title: "UrbanFlowAI",
-    description: "City Resilience via Predictive AI - Detects urban climate risks and automates municipal responses in real time.",
+    title: "IMDb Analytics",
+    description: "BI platform analyzing 9,000+ titles with Power BI dashboards. Processed Netflix/IMDb data for actionable business insights.",
     image: "/assets/aichess.webm",
-    href: "#",
+    href: "https://github.com/kavinarasan-005/IMDB-Data-Analysis-and-Visualization",
   },
   {
-    title: "BioSynth",
-    description: "Generative AI for Eco-Material Discovery - Accelerates discovery of carbon-negative, biodegradable materials.",
+    title: "L'Oréal Challenge",
+    description: "3-year inclusive sourcing roadmap with KPI design. Reached Quarter-Finals globally, modeled 3,000+ beneficiary growth.",
     image: "/assets/peter.webm",
-    href: "#",
+    href: "https://www.canva.com/design/DAGw4g4SgQ0/qgY8XRsB5XXbOsOS88ZqNg/edit",
   },
 ];
 
