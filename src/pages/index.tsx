@@ -825,100 +825,93 @@ export default function Home() {
             data-scroll-position="top"
             className="flex flex-col justify-start space-y-12"
           >
-            {/* Main Contact Section */}
-            <div className="relative rounded-2xl bg-gradient-to-br from-primary/[8%] via-white/[3%] to-secondary/[5%] p-12 backdrop-blur-sm border border-white/10">
-              {/* Header */}
-              <div className="text-center mb-10">
-                <h2 className="text-5xl font-medium tracking-tighter xl:text-7xl mb-4">
-                  Let&apos;s{" "}
-                  <span className="text-gradient clash-grotesk">collaborate.</span>
-                </h2>
-                <p className="text-lg tracking-tight text-muted-foreground max-w-2xl mx-auto">
-                  Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
-                </p>
-              </div>
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-medium tracking-tighter xl:text-7xl mb-4">
+                Let&apos;s{" "}
+                <span className="text-gradient clash-grotesk">collaborate.</span>
+              </h2>
+              <p className="text-lg tracking-tight text-muted-foreground max-w-2xl mx-auto">
+                Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
+              </p>
+            </div>
 
-              {/* Contact Grid */}
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-10">
-                {contactInfo.map((contact) => (
-                  <div
-                    key={contact.city}
-                    className="group flex flex-col items-center text-center p-6 rounded-xl bg-white/5 backdrop-blur transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-lg border border-white/5"
-                  >
-                    <contact.icon className="mb-4 text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
-                    <span className="text-lg font-medium text-foreground mb-2">
+            {/* Contact Grid - Matching website style */}
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-16">
+              {contactInfo.map((contact) => (
+                <div
+                  key={contact.city}
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[200px]"
+                >
+                  <div className="flex flex-col items-start">
+                    <contact.icon className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
                       {contact.city}
                     </span>
-                    <p className="text-sm text-muted-foreground mb-3">{contact.address}</p>
+                  </div>
+                  <div className="mt-2">
+                    <p className="tracking-tighter text-muted-foreground mb-2 text-sm">{contact.address}</p>
                     {contact.city === "Resume" ? (
-                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm font-medium">
+                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm">
                         {contact.email}
                       </Link>
                     ) : contact.city === "LinkedIn" ? (
-                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm font-medium">
+                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm">
                         {contact.email}
                       </Link>
                     ) : contact.city === "GitHub" ? (
-                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm font-medium">
+                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm">
                         {contact.email}
                       </Link>
                     ) : (
-                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm font-medium">
+                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm">
                         {contact.email}
                       </Link>
                     )}
                   </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Seeking Opportunities - Clean section */}
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-medium tracking-tight mb-4">
+                Currently Seeking
+                <span className="text-gradient clash-grotesk"> Opportunities</span>
+              </h3>
+              <p className="text-muted-foreground mb-8">
+                Available for internships starting January 2026 in these areas
+              </p>
+              
+              {/* Clean horizontal tags */}
+              <div className="flex flex-wrap justify-center gap-3 mb-12">
+                {opportunities.map((career, index) => (
+                  <div
+                    key={career.title}
+                    className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-primary/30"
+                  >
+                    <career.icon className="text-primary" size={16} />
+                    <span className="text-foreground text-sm font-medium">{career.title.replace(' Intern', '')}</span>
+                    <span className="text-xs text-muted-foreground">({career.location})</span>
+                  </div>
                 ))}
               </div>
 
-              {/* Seeking Opportunities - Compact Design */}
-              <div className="relative">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-medium tracking-tight mb-2">
-                    Currently Seeking
-                    <span className="text-gradient clash-grotesk"> Opportunities</span>
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Available for internships starting January 2026 in these areas:
-                  </p>
-                </div>
-                
-                {/* Horizontal Opportunity Tags */}
-                <div className="flex flex-wrap justify-center gap-4 mb-8">
-                  {opportunities.map((career, index) => (
-                    <div
-                      key={career.title}
-                      className="group flex items-center space-x-3 px-6 py-3 rounded-full bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-300"
-                    >
-                      <career.icon className="text-primary group-hover:scale-110 transition-transform duration-300" size={18} />
-                      <span className="text-foreground font-medium">{career.title.replace(' Intern', '')}</span>
-                      <div className="hidden group-hover:block">
-                        <span className="text-xs text-muted-foreground">({career.location})</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Single Call to Action */}
-                <div className="text-center">
-                  <Link href="mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity" passHref>
-                    <Button size="lg" className="px-8 py-6 text-lg font-medium">
-                      Start a Conversation <ChevronRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Or download my{" "}
-                    <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline font-medium">
-                      resume
-                    </Link>{" "}
-                    for detailed information
-                  </p>
-                </div>
+              {/* Single Call to Action */}
+              <div className="flex flex-col items-center space-y-4">
+                <Link href="mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity" passHref>
+                  <Button size="lg" className="px-8 py-3 text-lg font-medium">
+                    Start a Conversation <ChevronRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <p className="text-sm text-muted-foreground">
+                  Or download my{" "}
+                  <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline font-medium">
+                    resume
+                  </Link>{" "}
+                  for detailed information
+                </p>
               </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-tr from-secondary/20 to-primary/20 rounded-full blur-lg"></div>
             </div>
           </div>
         </section>
