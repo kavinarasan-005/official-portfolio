@@ -449,23 +449,13 @@ export default function Home() {
           className="mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
         >
           <div className={styles.intro}>
-            <div
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed=".09"
-              className="flex flex-row items-center space-x-1.5"
-            >
+            <div className="flex flex-row items-center space-x-1.5">
               <span className={styles.pill}>Product</span>
               <span className={styles.pill}>Analytics</span>
               <span className={styles.pill}>Development</span>
             </div>
             <div>
-              <h1
-                data-scroll
-                data-scroll-enable-touch-speed
-                data-scroll-speed=".06"
-                data-scroll-direction="horizontal"
-              >
+              <h1>
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
                   Hi, I'm Kavin Arasan
                   <br />
@@ -474,21 +464,11 @@ export default function Home() {
                   Product & Data Analyst
                 </span>
               </h1>
-              <p
-                data-scroll
-                data-scroll-enable-touch-speed
-                data-scroll-speed=".06"
-                className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
-              >
+              <p className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl">
                 Passionate about turning data into decisions and insights into products. Building dashboards that uncover hidden trends and designing user experiences that drive behavior.
               </p>
             </div>
-            <span
-              data-scroll
-              data-scroll-enable-touch-speed
-              data-scroll-speed=".06"
-              className="flex flex-row items-center space-x-1.5 pt-6"
-            >
+            <span className="flex flex-row items-center space-x-1.5 pt-6">
               <Link href="#contact" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
@@ -513,12 +493,10 @@ export default function Home() {
             </div>
           </div>
           <div
-            data-scroll
-            data-scroll-speed="-.01"
             id={styles["canvas-container"]}
             className="mt-14 h-full w-full xl:mt-0"
           >
-            <Suspense fallback={<span>Loading...</span>}>
+            <Suspense fallback={<div className="flex items-center justify-center h-full min-h-[400px]"><span className="text-muted-foreground">Loading 3D scene...</span></div>}>
               <Spline scene="/assets/scene.splinecode" />
             </Suspense>
           </div>
@@ -526,12 +504,7 @@ export default function Home() {
 
         {/* About */}
         <section id="about" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
-          >
+          <div className="my-14 flex max-w-6xl flex-col justify-start space-y-10">
             <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
               Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior and seeking internships in Product, Analytics, and Development starting January 2026. I enjoy collaborating across business and tech to make measurable impact through data-driven insights.
             </h2>

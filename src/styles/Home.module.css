@@ -4,7 +4,7 @@
     @apply flex flex-col items-start space-y-4 w-full;
 }
 .pill {
-    @apply transition border border-input bg-background flex items-center text-xs px-2.5 py-1.5 rounded-full hover:-translate-y-1 hover:bg-primary hover:text-primary-foreground duration-300;
+    @apply transition border border-input bg-background flex items-center text-xs px-2.5 py-1.5 rounded-full hover:-translate-y-1 hover:bg-primary hover:text-primary-foreground duration-150;
 }
 .intro h1 {
     @apply pt-2 leading-tight;
@@ -12,10 +12,10 @@
 
 /* scroll down */
 .scroll {
-    @apply transition duration-300 absolute bottom-6 left-1/2 mb-8 hidden -translate-x-1/2 transform-gpu flex-col items-center text-sm text-slate-400 xl:flex tracking-tight;
+    @apply transition duration-200 absolute bottom-6 left-1/2 mb-8 hidden -translate-x-1/2 flex-col items-center text-sm text-slate-400 xl:flex tracking-tight;
 }
 .scroll--hidden {
-    @apply opacity-0 transition duration-300;
+    @apply opacity-0 transition duration-200;
 }
 
 /* projects */
