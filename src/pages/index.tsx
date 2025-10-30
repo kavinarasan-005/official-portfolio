@@ -368,6 +368,10 @@ export default function Home() {
       new Locomotive({
         el: refScrollContainer.current ?? new HTMLElement(),
         smooth: true,
+        multiplier: 1,
+        class: "is-revealed",
+        scrollbarContainer: false,
+        lerp: 0.1,
       });
     }
 
@@ -415,12 +419,13 @@ export default function Home() {
   useEffect(() => {
     const tilt: HTMLElement[] = Array.from(document.querySelectorAll("#tilt"));
     VanillaTilt.init(tilt, {
-      speed: 300,
+      speed: 400,
       glare: true,
-      "max-glare": 0.1,
-      gyroscope: true,
-      perspective: 900,
-      scale: 0.9,
+      "max-glare": 0.05,
+      gyroscope: false,
+      perspective: 1000,
+      scale: 0.95,
+      transition: true,
     });
   }, []);
 
@@ -549,13 +554,14 @@ export default function Home() {
             className="my-24 flex flex-col justify-start space-y-10"
           >
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1,
-                staggerChildren: 0.5,
+                duration: 0.6,
+                ease: [0.25, 0.1, 0.25, 1],
+                staggerChildren: 0.1,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
             >
               <div className="flex flex-col py-6 xl:p-6">
@@ -715,13 +721,14 @@ export default function Home() {
             className="my-24 flex flex-col justify-start space-y-10"
           >
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1,
-                staggerChildren: 0.5,
+                duration: 0.6,
+                ease: [0.25, 0.1, 0.25, 1],
+                staggerChildren: 0.1,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
             >
               <div className="flex flex-col py-6 xl:p-6">
@@ -763,13 +770,14 @@ export default function Home() {
             className="my-24 flex flex-col justify-start space-y-10"
           >
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1,
-                staggerChildren: 0.5,
+                duration: 0.6,
+                ease: [0.25, 0.1, 0.25, 1],
+                staggerChildren: 0.1,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
             >
               <div className="flex flex-col py-6 xl:p-6">
@@ -847,13 +855,14 @@ export default function Home() {
             className="my-24 flex flex-col justify-start space-y-10"
           >
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1,
-                staggerChildren: 0.5,
+                duration: 0.6,
+                ease: [0.25, 0.1, 0.25, 1],
+                staggerChildren: 0.1,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3"
             >
               <div className="flex flex-col py-6 xl:p-6">

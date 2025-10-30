@@ -6,12 +6,20 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // scroll to element
-export function scrollTo(element: Element | null) {
+export function scrollTo(elementOrSelector: Element | string | null) {
+  let element: Element | null = null;
+  
+  if (typeof elementOrSelector === 'string') {
+    element = document.querySelector(elementOrSelector);
+  } else {
+    element = elementOrSelector;
+  }
+  
   if (!element) return;
 
   element.scrollIntoView({
     behavior: "smooth",
-    block: "center",
-    inline: "center",
+    block: "start",
+    inline: "nearest",
   });
 }

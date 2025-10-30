@@ -38,6 +38,21 @@
   }
 }
 
+/* Performance optimizations */
+* {
+  /* GPU acceleration for smoother animations */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+/* Smooth scrolling optimization */
+html {
+  scroll-behavior: smooth;
+}
+
 /* global elements */
 @layer base {
   html[data-scroll-orientation="horizontal"] {
