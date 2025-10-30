@@ -439,7 +439,12 @@ export default function Home() {
 
   return (
     <Container>
-      <div ref={refScrollContainer}>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        ref={refScrollContainer}
+      >
         <Gradient />
 
         {/* Hero Section */}
@@ -449,13 +454,43 @@ export default function Home() {
           className="mt-40 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
         >
           <div className={styles.intro}>
-            <div className="flex flex-row items-center space-x-1.5">
-              <span className={styles.pill}>Product</span>
-              <span className={styles.pill}>Analytics</span>
-              <span className={styles.pill}>Development</span>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, staggerChildren: 0.1 }}
+              className="flex flex-row items-center space-x-1.5"
+            >
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className={styles.pill}
+              >
+                Product
+              </motion.span>
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className={styles.pill}
+              >
+                Analytics
+              </motion.span>
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className={styles.pill}
+              >
+                Development
+              </motion.span>
+            </motion.div>
             <div>
-              <h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
                   Hi, I'm Kavin Arasan
                   <br />
@@ -463,12 +498,22 @@ export default function Home() {
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
                   Product & Data Analyst
                 </span>
-              </h1>
-              <p className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl">
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
+              >
                 Passionate about turning data into decisions and insights into products. Building dashboards that uncover hidden trends and designing user experiences that drive behavior.
-              </p>
+              </motion.p>
             </div>
-            <span className="flex flex-row items-center space-x-1.5 pt-6">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="flex flex-row items-center space-x-1.5 pt-6"
+            >
               <Link href="#contact" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
@@ -480,7 +525,7 @@ export default function Home() {
               >
                 Learn More
               </Button>
-            </span>
+            </motion.span>
 
             <div
               className={cn(
@@ -492,14 +537,17 @@ export default function Home() {
               <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
             id={styles["canvas-container"]}
             className="mt-14 h-full w-full xl:mt-0"
           >
             <Suspense fallback={<div className="flex items-center justify-center h-full min-h-[400px]"><span className="text-muted-foreground">Loading 3D scene...</span></div>}>
               <Spline scene="/assets/scene.splinecode" />
             </Suspense>
-          </div>
+          </motion.div>
         </section>
 
         {/* About */}
@@ -1011,7 +1059,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </div>
+      </motion.div>
     </Container>
   );
 }
