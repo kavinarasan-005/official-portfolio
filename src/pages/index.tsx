@@ -818,118 +818,107 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section id="contact" data-scroll-section className="my-64">
+        <section id="contact" data-scroll-section className="my-32">
           <div
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="flex flex-col justify-start space-y-16"
+            className="flex flex-col justify-start space-y-12"
           >
-            {/* Header */}
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tighter xl:text-6xl">
-                Let&apos;s{" "}
-                <span className="text-gradient clash-grotesk">collaborate.</span>
-              </h2>
-              <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-                Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
-              </p>
-            </div>
+            {/* Main Contact Section */}
+            <div className="relative rounded-2xl bg-gradient-to-br from-primary/[8%] via-white/[3%] to-secondary/[5%] p-12 backdrop-blur-sm border border-white/10">
+              {/* Header */}
+              <div className="text-center mb-10">
+                <h2 className="text-5xl font-medium tracking-tighter xl:text-7xl mb-4">
+                  Let&apos;s{" "}
+                  <span className="text-gradient clash-grotesk">collaborate.</span>
+                </h2>
+                <p className="text-lg tracking-tight text-muted-foreground max-w-2xl mx-auto">
+                  Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
+                </p>
+              </div>
 
-            {/* Contact Information */}
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-4">
-              {contactInfo.map((contact) => (
-                <div
-                  key={contact.city}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[200px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <contact.icon className="mb-4 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
+              {/* Contact Grid */}
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-10">
+                {contactInfo.map((contact) => (
+                  <div
+                    key={contact.city}
+                    className="group flex flex-col items-center text-center p-6 rounded-xl bg-white/5 backdrop-blur transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-lg border border-white/5"
+                  >
+                    <contact.icon className="mb-4 text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
+                    <span className="text-lg font-medium text-foreground mb-2">
                       {contact.city}
                     </span>
-                  </div>
-                  <div className="mt-2">
-                    <p className="tracking-tighter text-muted-foreground mb-2 text-sm">{contact.address}</p>
+                    <p className="text-sm text-muted-foreground mb-3">{contact.address}</p>
                     {contact.city === "Resume" ? (
-                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm">
+                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm font-medium">
                         {contact.email}
                       </Link>
                     ) : contact.city === "LinkedIn" ? (
-                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm">
+                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm font-medium">
                         {contact.email}
                       </Link>
                     ) : contact.city === "GitHub" ? (
-                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm">
+                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm font-medium">
                         {contact.email}
                       </Link>
                     ) : (
-                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm">
+                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm font-medium">
                         {contact.email}
                       </Link>
                     )}
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Seeking Opportunities */}
-            <div className="rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl font-medium tracking-tight xl:text-5xl">
-                  Seeking
-                  <span className="text-gradient clash-grotesk tracking-normal"> Opportunities</span>
-                </h3>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Available for internships starting January 2026.
-                </p>
-              </div>
-              
-              <div className="grid gap-6 md:grid-cols-1 xl:grid-cols-3">
-                {opportunities.map((career) => (
-                  <div
-                    key={career.title}
-                    className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[240px]"
-                  >
-                    <div className="flex flex-col items-start w-full">
-                      <career.icon className="mb-4 text-primary" size={20} />
-                      <span className="text-lg tracking-tight text-foreground mb-2">
-                        {career.title}
-                      </span>
-                      <div className="flex items-center space-x-2 text-sm mb-3">
-                        <MapPin className="text-muted-foreground" size={14} />
-                        <span className="text-muted-foreground">{career.location}</span>
-                      </div>
-                      <p className="text-sm font-semibold text-primary mb-3">{career.requirement}</p>
-                    </div>
-                    <div className="w-full">
-                      <p className="text-muted-foreground text-sm mb-4">{career.experience}</p>
-                      <Button 
-                        className="w-full"
-                        onClick={() => window.location.href = 'mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity - ' + career.title}
-                      >
-                        Get In Touch <ChevronRight className="ml-1 h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
                 ))}
               </div>
-            </div>
 
-            {/* Call to Action */}
-            <div className="text-center">
-              <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center">
-                <Link href="mailto:kavinarasan2019@gmail.com" passHref>
-                  <Button size="lg">
-                    Start a Conversation <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="/resume.pdf" target="_blank" passHref>
-                  <Button variant="outline" size="lg">
-                    Download Resume <FileText className="ml-1 h-4 w-4" />
-                  </Button>
-                </Link>
+              {/* Seeking Opportunities - Compact Design */}
+              <div className="relative">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-medium tracking-tight mb-2">
+                    Currently Seeking
+                    <span className="text-gradient clash-grotesk"> Opportunities</span>
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Available for internships starting January 2026 in these areas:
+                  </p>
+                </div>
+                
+                {/* Horizontal Opportunity Tags */}
+                <div className="flex flex-wrap justify-center gap-4 mb-8">
+                  {opportunities.map((career, index) => (
+                    <div
+                      key={career.title}
+                      className="group flex items-center space-x-3 px-6 py-3 rounded-full bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 hover:border-primary/30 transition-all duration-300"
+                    >
+                      <career.icon className="text-primary group-hover:scale-110 transition-transform duration-300" size={18} />
+                      <span className="text-foreground font-medium">{career.title.replace(' Intern', '')}</span>
+                      <div className="hidden group-hover:block">
+                        <span className="text-xs text-muted-foreground">({career.location})</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Single Call to Action */}
+                <div className="text-center">
+                  <Link href="mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity" passHref>
+                    <Button size="lg" className="px-8 py-6 text-lg font-medium">
+                      Start a Conversation <ChevronRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </Link>
+                  <p className="mt-4 text-sm text-muted-foreground">
+                    Or download my{" "}
+                    <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline font-medium">
+                      resume
+                    </Link>{" "}
+                    for detailed information
+                  </p>
+                </div>
               </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+              <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-tr from-secondary/20 to-primary/20 rounded-full blur-lg"></div>
             </div>
           </div>
         </section>
