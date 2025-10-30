@@ -65,277 +65,289 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Years Experience", value: "2+" },
-  { label: "Projects Completed", value: "11+" },
-  { label: "Technologies", value: "15+" },
+  { label: "Global Offices", value: "4" },
+  { label: "AI Technologies", value: "6+" },
+  { label: "Active Projects", value: "5+" },
 ];
 
 const coreTechnologies = [
   {
-    title: "Product Management",
-    description: "Roadmapping, PRDs, A/B Testing, Feature Prioritization",
-    icon: Target,
+    title: "Artificial Intelligence",
+    description: "Intelligent systems for climate modeling",
+    icon: Brain,
   },
   {
-    title: "Data Analytics",
-    description: "SQL, Power BI, Python for data-driven insights",
-    icon: BarChart3,
+    title: "Machine Learning",
+    description: "Predictive models for climate patterns",
+    icon: BrainCircuit,
   },
   {
-    title: "UI/UX Design",
-    description: "User research, prototyping, and design systems",
-    icon: Frame,
+    title: "Agentic AI",
+    description: "Autonomous climate action systems",
+    icon: Bot,
   },
   {
-    title: "Full-Stack Development",
-    description: "React, Node.js, C#, .NET, SQL Server",
-    icon: Code2,
+    title: "Computer Vision",
+    description: "Visual analysis of environmental data",
+    icon: Eye,
   },
   {
-    title: "Business Intelligence",
-    description: "Dashboard creation and KPI frameworks",
-    icon: TrendingUp,
-  },
-  {
-    title: "System Integration",
-    description: "ERP modules, automation, and cloud deployment",
+    title: "Deep Learning",
+    description: "Complex pattern recognition",
     icon: Network,
+  },
+  {
+    title: "Generative AI",
+    description: "Creative climate solutions",
+    icon: Sparkles,
   },
 ];
 
 const projects = [
   {
-    title: "CredPe",
-    description: "Behavioral nudges for credit card payments using psychology to reduce procrastination. Improved task completion by 30% in pilot tests.",
+    title: "ClimateTwin",
+    description: "AI-Powered Digital Climate Twins - Real-time virtual replicas of geographic regions for scenario modeling and risk testing.",
     image: "/assets/brainstack.webm",
-    href: "https://credpe-pay-smartly-now.lovable.app",
+    href: "#",
   },
   {
-    title: "WellNest",
-    description: "Mental wellness app for professionals with daily emotion tracking. Top 10 out of 200+ in ProductSpace Sprint.",
+    title: "VisionEarth",
+    description: "Satellite-AI Fusion for Ecosystem Monitoring - Tracks environmental change with multispectral imaging and CV pipelines.",
     image: "/assets/omnifood.webm",
-    href: "https://indian-wellbeing-hub.lovable.app/welcome",
+    href: "#",
   },
   {
-    title: "Messo",
-    description: "MERN-based hostel mess management system for 500+ students with JWT authentication and Redis caching.",
+    title: "GreenMind",
+    description: "Low-Energy AI for Smart Agriculture - Edge-deployed ML models optimizing water usage, soil health, and yield.",
     image: "/assets/portfolio.webm",
-    href: "https://github.com/krizto8/Messo/tree/main/Messo/Messo-main",
+    href: "#",
   },
 ];
 
 const projects1 = [
   {
-    title: "IMDb Analytics",
-    description: "Data intelligence platform processing 9,000+ titles with Power BI dashboards turning raw datasets into actionable insights.",
+    title: "UrbanFlowAI",
+    description: "City Resilience via Predictive AI - Detects urban climate risks and automates municipal responses in real time.",
     image: "/assets/aichess.webm",
-    href: "https://github.com/kavinarasan-005/IMDB-Data-Analysis-and-Visualization",
+    href: "#",
   },
   {
-    title: "L'Oréal Challenge",
-    description: "Inclusive sourcing roadmap with Supplier Inclusion Index. Reached Quarter-Finals globally with 600→3,000+ beneficiaries model.",
+    title: "BioSynth",
+    description: "Generative AI for Eco-Material Discovery - Accelerates discovery of carbon-negative, biodegradable materials.",
     image: "/assets/peter.webm",
-    href: "https://www.canva.com/design/DAGw4g4SgQ0/qgY8XRsB5XXbOsOS88ZqNg/edit",
+    href: "#",
   },
 ];
 
 const solutions = [
   {
-    service: "Product Management",
-    description: "Product roadmapping, PRDs, user stories, A/B testing, and feature prioritization for measurable impact.",
-    icon: Target,
+    service: "Web Development",
+    description: "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js for optimal performance.",
+    icon: Globe,
   },
   {
-    service: "Data Analytics & BI",
-    description: "Power BI dashboards, SQL optimization, KPI frameworks, and data visualization for decision-making.",
-    icon: BarChart3,
+    service: "Mobile Development",
+    description: "Cross-platform mobile applications using React Native and Flutter, delivering native-like experiences across devices.",
+    icon: MonitorSmartphone,
   },
   {
-    service: "Full-Stack Development",
-    description: "React.js, Node.js, C#/.NET applications with cloud deployment and system integration capabilities.",
-    icon: Code2,
+    service: "Full Stack Solutions",
+    description: "End-to-end development services from database design to frontend implementation with seamless API integration.",
+    icon: Database,
   },
   {
     service: "UI/UX Design",
-    description: "User research, wireframing, prototyping, and design systems using Figma for optimal user experiences.",
+    description: "User-centered design approach creating intuitive interfaces that enhance user experience and drive engagement.",
     icon: Frame,
   },
   {
-    service: "Process Automation",
-    description: "ERP modules, workflow automation, and system integration to reduce manual tasks and improve efficiency.",
-    icon: Zap,
+    service: "Consulting & Strategy",
+    description: "Technical consulting to help businesses choose the right technology stack and development approach for their goals.",
+    icon: Lightbulb,
   },
 ];
 
 const technicalHighlights = [
   {
-    title: "MERN Stack Development",
-    description: "Full-stack applications with React.js, Node.js, Express, and MongoDB including JWT authentication, Redis caching, and Docker deployment.",
-    icon: Code2,
+    title: "Diffusion Transformers",
+    description: "Advanced generative models combining diffusion processes with transformer architectures for high-quality data synthesis and prediction.",
+    icon: Cpu,
   },
   {
-    title: "Power BI & SQL Analytics",
-    description: "Complex dashboards with DAX functions, SQL optimization using CTEs and window functions for business intelligence and decision-making.",
-    icon: BarChart3,
-  },
-  {
-    title: "C# .NET ERP Systems",
-    description: "Enterprise resource planning modules with SQL Server integration, Windows Services, and Classic ASP legacy system modernization.",
-    icon: Database,
-  },
-  {
-    title: "Behavioral Product Design",
-    description: "User research methodologies, A/B testing frameworks, and behavioral psychology implementation using Fogg's Behavior Model for product optimization.",
+    title: "Neuro-Symbolic Reasoning",
+    description: "Hybrid AI systems that combine neural networks with symbolic reasoning for interpretable and robust decision-making capabilities.",
     icon: Brain,
   },
   {
-    title: "Cloud & DevOps",
-    description: "AWS EC2 deployment, Docker containerization, Nginx load balancing, and automated CI/CD pipelines for scalable web applications.",
-    icon: Cloud,
+    title: "Federated Learning",
+    description: "Distributed machine learning approach enabling model training across edge devices while preserving data privacy and security.",
+    icon: Network,
+  },
+  {
+    title: "Multi-Agent Systems",
+    description: "Complex simulation environments where multiple AI agents interact and collaborate to model real-world scenarios and behaviors.",
+    icon: Users,
+  },
+  {
+    title: "TinyML for Energy Grids",
+    description: "Ultra-efficient machine learning models optimized for microcontrollers in renewable energy grid management and optimization.",
+    icon: Zap,
   },
 ];
 
 const aiTrends = [
   {
-    title: "Product Analytics",
-    description: "Data-driven product decisions using cohort analysis, funnel optimization, and A/B testing to improve user activation and retention metrics.",
-    icon: BarChart3,
+    title: "Multimodal AI",
+    description: "Advanced AI systems that process and understand multiple types of data simultaneously - text, images, audio, and video - creating more human-like intelligence.",
+    icon: Globe,
   },
   {
-    title: "Behavioral Design",
-    description: "Psychology-driven UX design incorporating behavioral nudges, habit formation, and cognitive biases to drive user engagement and task completion.",
-    icon: Brain,
+    title: "Agentic Systems",
+    description: "Autonomous AI agents that can plan, reason, and take actions independently to achieve complex goals, revolutionizing automation and decision-making.",
+    icon: Bot,
   },
   {
-    title: "Full-Stack Development",
-    description: "Modern web applications using React ecosystem, Node.js backend, and cloud deployment with focus on scalability and user experience.",
-    icon: Code2,
+    title: "Edge AI",
+    description: "Bringing AI processing power directly to devices and sensors, enabling real-time intelligence with reduced latency and enhanced privacy protection.",
+    icon: Smartphone,
   },
   {
-    title: "Business Intelligence",
-    description: "Enterprise dashboards and KPI frameworks using Power BI, SQL, and Python to transform raw data into actionable business insights.",
-    icon: TrendingUp,
+    title: "AI for Robotics",
+    description: "Intelligent robotic systems powered by advanced AI algorithms, enabling sophisticated manipulation, navigation, and human-robot collaboration.",
+    icon: Server,
   },
   {
-    title: "System Integration",
-    description: "ERP module development, legacy system modernization, and process automation to streamline business operations and reduce manual overhead.",
-    icon: Network,
+    title: "AI Explainability",
+    description: "Making AI decision-making processes transparent and interpretable, building trust and enabling responsible AI deployment in critical applications.",
+    icon: Shield,
   },
   {
-    title: "User Research",
-    description: "Qualitative and quantitative research methods including user interviews, usability testing, and persona mapping for product optimization.",
-    icon: Users,
+    title: "Sustainable AI",
+    description: "Developing energy-efficient AI models and responsible practices that minimize environmental impact while maximizing societal benefits.",
+    icon: Leaf,
   },
 ];
 
 const caseStudies = [
   {
-    title: "IT Service Optimization",
-    description: "Analyzed 1,000+ IT service desk requests at Eros Group, built Power BI dashboards for senior leadership decision-making.",
-    metric: "↑40% efficiency",
+    title: "Crop Yield Prediction",
+    description: "Advanced machine learning models analyzing satellite imagery, weather patterns, and soil data to predict crop yields with unprecedented accuracy.",
+    metric: "↑92% accuracy",
     icon: TrendingUp,
   },
   {
-    title: "ERP Process Automation",
-    description: "Developed 3 internal ERP modules using C#/.NET, automating manual processes and improving data accuracy across departments.",
-    metric: "↓50% manual tasks",
-    icon: Zap,
+    title: "Urban Heat Index Forecast",
+    description: "Real-time urban climate monitoring system using IoT sensors and AI algorithms to predict heat island effects and optimize city planning.",
+    metric: "↓40% model latency",
+    icon: Activity,
   },
   {
-    title: "Behavioral UX Design",
-    description: "CredPe app with behavioral nudges using psychology principles, achieving measurable improvement in user task completion rates.",
-    metric: "↑30% completion",
-    icon: Brain,
+    title: "Flood Risk Modeling",
+    description: "Comprehensive flood prediction system combining hydrological data, topography, and climate models to enhance disaster preparedness.",
+    metric: "↑30% response window",
+    icon: Globe2,
   },
 ];
 
 const officeLocations = [
   {
-    city: "Dubai, UAE",
-    address: "Currently based in Dubai",
-    email: "kavinarasan2019@gmail.com",
+    city: "London, UK",
+    address: "Shoreditch Tech Campus, London E1",
+    email: "uk@climateai.org",
     icon: MapPin,
   },
   {
-    city: "Gwalior, India",
-    address: "ABV-IIITM Gwalior, Madhya Pradesh",
-    email: "Student at IIITM Gwalior",
-    icon: Building,
+    city: "Bangkok, Thailand",
+    address: "Sukhumvit Innovation Hub, Bangkok 10110",
+    email: "asia@climateai.org",
+    icon: MapPin,
+  },
+  {
+    city: "Pune, India",
+    address: "Magarpatta Cyber City, Pune MH 411028",
+    email: "pune@climateai.org",
+    icon: MapPin,
+  },
+  {
+    city: "Gurgaon, India",
+    address: "DLF Cyber City, Tower B, Gurgaon HR 122002",
+    email: "gurgaon@climateai.org",
+    icon: MapPin,
   },
 ];
 
 const careers = [
   {
-    title: "Product Manager Intern",
-    location: "Remote/Dubai",
-    requirement: "Available from Jan 2026",
-    experience: "Product roadmapping, A/B testing, and user research experience",
-    icon: Target,
+    title: "AI Research Scientist",
+    location: "Remote",
+    requirement: "Ph.D. required",
+    experience: "5–10 years of experience in research publication and patent filing.",
+    icon: Brain,
   },
   {
-    title: "Data Analyst Intern",
-    location: "Remote/Dubai", 
-    requirement: "Available from Jan 2026",
-    experience: "Power BI, SQL, and Python analytics experience",
-    icon: BarChart3,
+    title: "ML Engineer",
+    location: "Remote",
+    requirement: "Ph.D. required",
+    experience: "5–10 years of experience in research",
+    icon: Cpu,
   },
   {
-    title: "Software Developer Intern",
-    location: "Remote/Dubai",
-    requirement: "Available from Jan 2026",
-    experience: "Full-stack development with React, Node.js, and C#/.NET",
-    icon: Code2,
+    title: "Deep Learning Specialist",
+    location: "Remote",
+    requirement: "Ph.D. required",
+    experience: "2–3 years of experience in research",
+    icon: Network,
   },
 ];
 
 const benefits = [
   {
-    title: "Product & Analytics Excellence",
-    description: "Strong foundation in product management methodologies, A/B testing frameworks, and data analytics using SQL, Power BI, and Python for data-driven decision making.",
-    icon: Target,
+    title: "Remote-First & Async-Friendly Culture",
+    description: "Work from anywhere in the world with flexible schedules that respect your work-life balance. Our global team collaborates seamlessly across time zones, empowering you to do your best work when and where you're most productive.",
+    icon: Globe,
   },
   {
-    title: "Full-Stack Development Skills",
-    description: "Comprehensive experience with modern web technologies including React.js, Node.js, C#/.NET, and cloud deployment for scalable application development.",
-    icon: Code2,
+    title: "Access to Cutting-Edge Infrastructure",
+    description: "Leverage state-of-the-art GPU clusters, cloud computing resources, and curated datasets. Our world-class infrastructure removes technical barriers, letting you focus on breakthrough AI/ML research and innovation.",
+    icon: Server,
   },
   {
-    title: "Design & User Research",
-    description: "UI/UX design expertise with Figma, user research methodologies, behavioral design principles, and prototyping for optimal user experiences.",
-    icon: Frame,
+    title: "Open Source & Research Publication Support",
+    description: "Share your discoveries with the world. We actively support publishing in top-tier conferences and contributing to open-source projects, helping you build your reputation while advancing the field of AI for good.",
+    icon: FileText,
   },
   {
-    title: "Cross-Functional Collaboration",
-    description: "Proven ability to work across business and technical teams, translating requirements into technical solutions and driving projects from concept to completion.",
+    title: "Collaborative & Inclusive Research Culture",
+    description: "Thrive in a diverse environment where every voice matters. Our inclusive culture fosters open collaboration, shared learning, and collective problem-solving across disciplines and backgrounds.",
     icon: Users,
   },
   {
-    title: "Process Automation & Efficiency",
-    description: "Experience in building ERP modules, automating manual processes, and creating workflows that improve operational efficiency and reduce costs.",
-    icon: Zap,
+    title: "Freedom to Innovate",
+    description: "Lead projects that align with your passions and expertise. We empower team members to explore bold ideas, take ownership of research directions, and drive initiatives that could reshape how AI addresses global challenges.",
+    icon: Lightbulb,
   },
   {
-    title: "Academic Excellence & Learning",
-    description: "Currently pursuing B.Tech in Computer Science at IIITM Gwalior with hands-on project experience and multiple certifications in product management and analytics.",
+    title: "Mentorship & Growth",
+    description: "Accelerate your career with structured mentorship programs, continuous learning opportunities, and skill development resources. Whether you're early-career or seasoned, we invest in your professional growth.",
     icon: Award,
   },
   {
-    title: "Real-World Impact",
-    description: "Track record of delivering measurable results including 30% improvement in task completion rates, 40% reduction in manual tasks, and successful project implementations.",
+    title: "Mission-Driven Impact",
+    description: "Make a difference that matters. Every project contributes to solving critical sustainability challenges and creating positive global impact through responsible AI innovation. Your work here changes the world.",
     icon: Heart,
   },
 ];
 
 const testimonials = [
   {
-    quote: "Kavin's analytical approach and dashboard insights significantly improved our IT operations efficiency.",
-    author: "IT Leadership Team",
-    company: "Eros Group",
+    quote: "ClimateAI helped us cut forecasting time in half while improving accuracy.",
+    author: "Dr. Sarah Chen",
+    company: "Global Weather Systems",
   },
   {
-    quote: "Delivered clean, responsive React.js components that perfectly matched our design requirements.",
-    author: "Project Manager",
-    company: "LUMINTRIQAI",
+    quote: "Our carbon analysis was transformed through their Edge-AI sensors.",
+    author: "Mark Rodriguez",
+    company: "EcoTech Solutions",
   },
 ];
 
@@ -442,11 +454,11 @@ export default function Home() {
                 data-scroll-direction="horizontal"
               >
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
-                  Hi, I'm
+                  Hi, I'm Kavin Arasan
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  Kavin Arasan
+                  Product & Data Analyst
                 </span>
               </h1>
               <p
@@ -455,7 +467,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                Product & Data Analyst passionate about turning data into decisions and insights into products. Currently pursuing B.Tech. in Computer Science.
+                Passionate about turning data into decisions and insights into products. Building dashboards that uncover hidden trends and designing user experiences that drive behavior.
               </p>
             </div>
             <span
@@ -471,7 +483,7 @@ export default function Home() {
               </Link>
               <Button
                 variant="outline"
-                onClick={() => scrollTo(document.querySelector("#about"))}
+                onClick={() => scrollTo("#about")}
               >
                 Learn More
               </Button>
@@ -508,7 +520,7 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I enjoy building dashboards that uncover hidden trends, designing user experiences that drive behavior, and collaborating across business and tech to make measurable impact. Currently seeking internships in Product, Analytics, and Development from January 2026.
+              Pioneering the future of climate intelligence through cutting-edge AI research and innovation. Our mission is to develop AI systems that power global climate resilience, transparency, and sustainability through innovative research and practical solutions.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
