@@ -65,9 +65,9 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Global Offices", value: "4" },
-  { label: "AI Technologies", value: "6+" },
-  { label: "Active Projects", value: "5+" },
+  { label: "Years of Experience", value: "2+" },
+  { label: "Projects Completed", value: "11+" },
+  { label: "Certifications", value: "6+" },
 ];
 
 const coreTechnologies = [
@@ -520,7 +520,7 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              Pioneering the future of climate intelligence through cutting-edge AI research and innovation. Our mission is to develop AI systems that power global climate resilience, transparency, and sustainability through innovative research and practical solutions.
+              Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior and seeking internships in Product, Analytics, and Development starting January 2026. I enjoy collaborating across business and tech to make measurable impact through data-driven insights.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
