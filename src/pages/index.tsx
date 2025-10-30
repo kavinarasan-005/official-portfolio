@@ -65,105 +65,105 @@ import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
 const aboutStats = [
-  { label: "Global Offices", value: "4" },
-  { label: "AI Technologies", value: "6+" },
-  { label: "Active Projects", value: "5+" },
+  { label: "Years Experience", value: "2+" },
+  { label: "Projects Completed", value: "11+" },
+  { label: "Technologies", value: "15+" },
 ];
 
 const coreTechnologies = [
   {
-    title: "Artificial Intelligence",
-    description: "Intelligent systems for climate modeling",
-    icon: Brain,
+    title: "Product Management",
+    description: "Roadmapping, PRDs, A/B Testing, Feature Prioritization",
+    icon: Target,
   },
   {
-    title: "Machine Learning",
-    description: "Predictive models for climate patterns",
-    icon: BrainCircuit,
+    title: "Data Analytics",
+    description: "SQL, Power BI, Python for data-driven insights",
+    icon: BarChart3,
   },
   {
-    title: "Agentic AI",
-    description: "Autonomous climate action systems",
-    icon: Bot,
+    title: "UI/UX Design",
+    description: "User research, prototyping, and design systems",
+    icon: Frame,
   },
   {
-    title: "Computer Vision",
-    description: "Visual analysis of environmental data",
-    icon: Eye,
+    title: "Full-Stack Development",
+    description: "React, Node.js, C#, .NET, SQL Server",
+    icon: Code2,
   },
   {
-    title: "Deep Learning",
-    description: "Complex pattern recognition",
+    title: "Business Intelligence",
+    description: "Dashboard creation and KPI frameworks",
+    icon: TrendingUp,
+  },
+  {
+    title: "System Integration",
+    description: "ERP modules, automation, and cloud deployment",
     icon: Network,
-  },
-  {
-    title: "Generative AI",
-    description: "Creative climate solutions",
-    icon: Sparkles,
   },
 ];
 
 const projects = [
   {
-    title: "ClimateTwin",
-    description: "AI-Powered Digital Climate Twins - Real-time virtual replicas of geographic regions for scenario modeling and risk testing.",
+    title: "CredPe",
+    description: "Behavioral nudges for credit card payments using psychology to reduce procrastination. Improved task completion by 30% in pilot tests.",
     image: "/assets/brainstack.webm",
-    href: "#",
+    href: "https://credpe-pay-smartly-now.lovable.app",
   },
   {
-    title: "VisionEarth",
-    description: "Satellite-AI Fusion for Ecosystem Monitoring - Tracks environmental change with multispectral imaging and CV pipelines.",
+    title: "WellNest",
+    description: "Mental wellness app for professionals with daily emotion tracking. Top 10 out of 200+ in ProductSpace Sprint.",
     image: "/assets/omnifood.webm",
-    href: "#",
+    href: "https://indian-wellbeing-hub.lovable.app/welcome",
   },
   {
-    title: "GreenMind",
-    description: "Low-Energy AI for Smart Agriculture - Edge-deployed ML models optimizing water usage, soil health, and yield.",
+    title: "Messo",
+    description: "MERN-based hostel mess management system for 500+ students with JWT authentication and Redis caching.",
     image: "/assets/portfolio.webm",
-    href: "#",
+    href: "https://github.com/krizto8/Messo/tree/main/Messo/Messo-main",
   },
 ];
 
 const projects1 = [
   {
-    title: "UrbanFlowAI",
-    description: "City Resilience via Predictive AI - Detects urban climate risks and automates municipal responses in real time.",
+    title: "IMDb Analytics",
+    description: "Data intelligence platform processing 9,000+ titles with Power BI dashboards turning raw datasets into actionable insights.",
     image: "/assets/aichess.webm",
-    href: "#",
+    href: "https://github.com/kavinarasan-005/IMDB-Data-Analysis-and-Visualization",
   },
   {
-    title: "BioSynth",
-    description: "Generative AI for Eco-Material Discovery - Accelerates discovery of carbon-negative, biodegradable materials.",
+    title: "L'Oréal Challenge",
+    description: "Inclusive sourcing roadmap with Supplier Inclusion Index. Reached Quarter-Finals globally with 600→3,000+ beneficiaries model.",
     image: "/assets/peter.webm",
-    href: "#",
+    href: "https://www.canva.com/design/DAGw4g4SgQ0/qgY8XRsB5XXbOsOS88ZqNg/edit",
   },
 ];
 
 const solutions = [
   {
-    service: "Web Development",
-    description: "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js for optimal performance.",
-    icon: Globe,
+    service: "Product Management",
+    description: "Product roadmapping, PRDs, user stories, A/B testing, and feature prioritization for measurable impact.",
+    icon: Target,
   },
   {
-    service: "Mobile Development",
-    description: "Cross-platform mobile applications using React Native and Flutter, delivering native-like experiences across devices.",
-    icon: MonitorSmartphone,
+    service: "Data Analytics & BI",
+    description: "Power BI dashboards, SQL optimization, KPI frameworks, and data visualization for decision-making.",
+    icon: BarChart3,
   },
   {
-    service: "Full Stack Solutions",
-    description: "End-to-end development services from database design to frontend implementation with seamless API integration.",
-    icon: Database,
+    service: "Full-Stack Development",
+    description: "React.js, Node.js, C#/.NET applications with cloud deployment and system integration capabilities.",
+    icon: Code2,
   },
   {
     service: "UI/UX Design",
-    description: "User-centered design approach creating intuitive interfaces that enhance user experience and drive engagement.",
+    description: "User research, wireframing, prototyping, and design systems using Figma for optimal user experiences.",
     icon: Frame,
   },
   {
-    service: "Consulting & Strategy",
-    description: "Technical consulting to help businesses choose the right technology stack and development approach for their goals.",
-    icon: Lightbulb,
+    service: "Process Automation",
+    description: "ERP modules, workflow automation, and system integration to reduce manual tasks and improve efficiency.",
+    icon: Zap,
   },
 ];
 
@@ -442,9 +442,9 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>AI</span>
-              <span className={styles.pill}>Climate</span>
-              <span className={styles.pill}>Sustainability</span>
+              <span className={styles.pill}>Product</span>
+              <span className={styles.pill}>Analytics</span>
+              <span className={styles.pill}>Development</span>
             </div>
             <div>
               <h1
@@ -454,11 +454,11 @@ export default function Home() {
                 data-scroll-direction="horizontal"
               >
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
-                  AI for a Smarter,
+                  Hi, I'm
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  Sustainable Future
+                  Kavin Arasan
                 </span>
               </h1>
               <p
@@ -467,7 +467,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                Merging intelligence and impact to solve our planet's biggest challenges.
+                Product & Data Analyst passionate about turning data into decisions and insights into products. Currently pursuing B.Tech. in Computer Science.
               </p>
             </div>
             <span
@@ -520,7 +520,7 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              Pioneering the future of climate intelligence through cutting-edge AI research and innovation. Our mission is to develop AI systems that power global climate resilience, transparency, and sustainability through innovative research and practical solutions.
+              I enjoy building dashboards that uncover hidden trends, designing user experiences that drive behavior, and collaborating across business and tech to make measurable impact. Currently seeking internships in Product, Analytics, and Development from January 2026.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
