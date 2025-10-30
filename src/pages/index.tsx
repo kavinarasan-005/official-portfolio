@@ -141,57 +141,57 @@ const projects1 = [
 
 const solutions = [
   {
-    service: "Web Development",
-    description: "Custom websites and web applications built with modern frameworks like React, Next.js, and Vue.js for optimal performance.",
-    icon: Globe,
+    service: "Product Strategy & Roadmapping",
+    description: "End-to-end product management from ideation to launch, with user research, PRDs, and feature prioritization frameworks.",
+    icon: Target,
   },
   {
-    service: "Mobile Development",
-    description: "Cross-platform mobile applications using React Native and Flutter, delivering native-like experiences across devices.",
-    icon: MonitorSmartphone,
+    service: "Data Analytics & BI",
+    description: "Business intelligence dashboards, KPI frameworks, SQL analysis, and data visualization for actionable insights.",
+    icon: BarChart3,
   },
   {
-    service: "Full Stack Solutions",
-    description: "End-to-end development services from database design to frontend implementation with seamless API integration.",
-    icon: Database,
+    service: "Full-Stack Development",
+    description: "Modern web applications using React, Node.js, and cloud deployment with focus on scalability and performance.",
+    icon: Code2,
   },
   {
-    service: "UI/UX Design",
-    description: "User-centered design approach creating intuitive interfaces that enhance user experience and drive engagement.",
+    service: "UI/UX Design & Research",
+    description: "User-centered design processes, prototyping, usability testing, and conversion optimization through behavioral insights.",
     icon: Frame,
   },
   {
-    service: "Consulting & Strategy",
-    description: "Technical consulting to help businesses choose the right technology stack and development approach for their goals.",
-    icon: Lightbulb,
+    service: "Process Automation",
+    description: "Workflow optimization, ERP module development, and system integration to reduce manual tasks and improve efficiency.",
+    icon: Zap,
   },
 ];
 
 const technicalHighlights = [
   {
-    title: "Diffusion Transformers",
-    description: "Advanced generative models combining diffusion processes with transformer architectures for high-quality data synthesis and prediction.",
-    icon: Cpu,
+    title: "Product Management",
+    description: "A/B testing, user research, roadmapping, and feature prioritization using data-driven frameworks and agile methodologies.",
+    icon: Target,
   },
   {
-    title: "Neuro-Symbolic Reasoning",
-    description: "Hybrid AI systems that combine neural networks with symbolic reasoning for interpretable and robust decision-making capabilities.",
-    icon: Brain,
+    title: "Business Intelligence",
+    description: "Power BI dashboards, SQL optimization, and KPI frameworks that turn complex data into actionable business insights.",
+    icon: BarChart3,
   },
   {
-    title: "Federated Learning",
-    description: "Distributed machine learning approach enabling model training across edge devices while preserving data privacy and security.",
-    icon: Network,
+    title: "MERN Stack Development", 
+    description: "Full-stack applications using MongoDB, Express, React, and Node.js with JWT authentication and Redis caching.",
+    icon: Code2,
   },
   {
-    title: "Multi-Agent Systems",
-    description: "Complex simulation environments where multiple AI agents interact and collaborate to model real-world scenarios and behaviors.",
-    icon: Users,
-  },
-  {
-    title: "TinyML for Energy Grids",
-    description: "Ultra-efficient machine learning models optimized for microcontrollers in renewable energy grid management and optimization.",
+    title: "Process Automation",
+    description: "C# .NET applications, Windows Services, and ERP modules that automate workflows and improve operational efficiency.",
     icon: Zap,
+  },
+  {
+    title: "UX Research & Design",
+    description: "User interviews, journey mapping, behavioral analysis, and Figma prototyping for conversion-focused experiences.",
+    icon: Users,
   },
 ];
 
