@@ -921,7 +921,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Office Locations */}
+        {/* Contact Information */}
         <section id="locations" data-scroll-section>
           <div
             data-scroll
@@ -931,11 +931,11 @@ export default function Home() {
           >
             <div className="text-center">
               <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                Global
-                <span className="text-gradient clash-grotesk tracking-normal"> Presence</span>
+                Get In
+                <span className="text-gradient clash-grotesk tracking-normal"> Touch</span>
               </h2>
               <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Our offices around the world driving climate innovation.
+                Let's connect and explore opportunities to work together.
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
@@ -959,7 +959,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Careers */}
+        {/* Career Opportunities */}
         <section id="careers" data-scroll-section>
           <div
             data-scroll
@@ -969,11 +969,11 @@ export default function Home() {
           >
             <div className="text-center">
               <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                Join Our
-                <span className="text-gradient clash-grotesk tracking-normal"> Team</span>
+                Seeking
+                <span className="text-gradient clash-grotesk tracking-normal"> Opportunities</span>
               </h2>
               <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Build the future of climate AI with us.
+                Available for internships starting January 2026.
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -1002,7 +1002,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* Working Principles */}
         <section id="benefits" data-scroll-section>
           <div
             data-scroll
@@ -1012,8 +1012,8 @@ export default function Home() {
           >
             <div className="text-center">
               <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                What We
-                <span className="text-gradient clash-grotesk tracking-normal"> Offer</span>
+                How I
+                <span className="text-gradient clash-grotesk tracking-normal"> Work</span>
               </h2>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
