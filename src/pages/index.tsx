@@ -249,105 +249,105 @@ const caseStudies = [
   },
 ];
 
-const officeLocations = [
+const contactInfo = [
   {
-    city: "London, UK",
-    address: "Shoreditch Tech Campus, London E1",
-    email: "uk@climateai.org",
+    city: "Dubai, UAE",
+    address: "Available for Remote & On-site Work",
+    email: "kavinarasan2019@gmail.com",
     icon: MapPin,
   },
   {
-    city: "Bangkok, Thailand",
-    address: "Sukhumvit Innovation Hub, Bangkok 10110",
-    email: "asia@climateai.org",
-    icon: MapPin,
+    city: "LinkedIn",
+    address: "Professional Network & Updates",
+    email: "linkedin.com/in/kavinarasan",
+    icon: Linkedin,
   },
   {
-    city: "Pune, India",
-    address: "Magarpatta Cyber City, Pune MH 411028",
-    email: "pune@climateai.org",
-    icon: MapPin,
+    city: "GitHub",
+    address: "Open Source Projects & Code",
+    email: "github.com/kavinarasan-005",
+    icon: Code2,
   },
   {
-    city: "Gurgaon, India",
-    address: "DLF Cyber City, Tower B, Gurgaon HR 122002",
-    email: "gurgaon@climateai.org",
-    icon: MapPin,
-  },
-];
-
-const careers = [
-  {
-    title: "AI Research Scientist",
-    location: "Remote",
-    requirement: "Ph.D. required",
-    experience: "5–10 years of experience in research publication and patent filing.",
-    icon: Brain,
-  },
-  {
-    title: "ML Engineer",
-    location: "Remote",
-    requirement: "Ph.D. required",
-    experience: "5–10 years of experience in research",
-    icon: Cpu,
-  },
-  {
-    title: "Deep Learning Specialist",
-    location: "Remote",
-    requirement: "Ph.D. required",
-    experience: "2–3 years of experience in research",
-    icon: Network,
-  },
-];
-
-const benefits = [
-  {
-    title: "Remote-First & Async-Friendly Culture",
-    description: "Work from anywhere in the world with flexible schedules that respect your work-life balance. Our global team collaborates seamlessly across time zones, empowering you to do your best work when and where you're most productive.",
-    icon: Globe,
-  },
-  {
-    title: "Access to Cutting-Edge Infrastructure",
-    description: "Leverage state-of-the-art GPU clusters, cloud computing resources, and curated datasets. Our world-class infrastructure removes technical barriers, letting you focus on breakthrough AI/ML research and innovation.",
-    icon: Server,
-  },
-  {
-    title: "Open Source & Research Publication Support",
-    description: "Share your discoveries with the world. We actively support publishing in top-tier conferences and contributing to open-source projects, helping you build your reputation while advancing the field of AI for good.",
+    city: "Resume",
+    address: "Detailed Experience & Skills",
+    email: "Download PDF Resume",
     icon: FileText,
   },
+];
+
+const opportunities = [
   {
-    title: "Collaborative & Inclusive Research Culture",
-    description: "Thrive in a diverse environment where every voice matters. Our inclusive culture fosters open collaboration, shared learning, and collective problem-solving across disciplines and backgrounds.",
+    title: "Product Management Intern",
+    location: "Remote/Hybrid",
+    requirement: "January 2026 onwards",
+    experience: "Roadmapping, A/B testing, user research, and data-driven feature prioritization.",
+    icon: Target,
+  },
+  {
+    title: "Business Analytics Intern",
+    location: "Remote/Hybrid",
+    requirement: "January 2026 onwards",
+    experience: "SQL, Power BI, dashboard creation, and KPI frameworks for business insights.",
+    icon: BarChart3,
+  },
+  {
+    title: "Software Development Intern",
+    location: "Remote/Hybrid",
+    requirement: "January 2026 onwards",
+    experience: "React, Node.js, Python, C#, and full-stack application development.",
+    icon: Code2,
+  },
+];
+
+const workingPrinciples = [
+  {
+    title: "Data-Driven Decision Making",
+    description: "I believe in letting data guide every decision. Whether it's A/B testing product features or analyzing user behavior, I use metrics and analytics to validate assumptions and optimize outcomes.",
+    icon: BarChart3,
+  },
+  {
+    title: "User-Centered Design Approach",
+    description: "Every solution starts with understanding the user. Through interviews, journey mapping, and behavioral analysis, I ensure that products solve real problems and create meaningful experiences.",
     icon: Users,
   },
   {
-    title: "Freedom to Innovate",
-    description: "Lead projects that align with your passions and expertise. We empower team members to explore bold ideas, take ownership of research directions, and drive initiatives that could reshape how AI addresses global challenges.",
+    title: "Cross-Functional Collaboration",
+    description: "Great products are built by great teams. I thrive in environments where business, design, and engineering work together, bringing diverse perspectives to solve complex challenges.",
+    icon: Globe,
+  },
+  {
+    title: "Continuous Learning & Growth",
+    description: "Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, earning certifications, and staying updated with industry trends to deliver cutting-edge solutions.",
     icon: Lightbulb,
   },
   {
-    title: "Mentorship & Growth",
-    description: "Accelerate your career with structured mentorship programs, continuous learning opportunities, and skill development resources. Whether you're early-career or seasoned, we invest in your professional growth.",
-    icon: Award,
+    title: "Process Optimization Focus",
+    description: "I see inefficiencies as opportunities. From automating manual workflows to building scalable systems, I'm passionate about creating solutions that save time and improve productivity.",
+    icon: Zap,
   },
   {
-    title: "Mission-Driven Impact",
-    description: "Make a difference that matters. Every project contributes to solving critical sustainability challenges and creating positive global impact through responsible AI innovation. Your work here changes the world.",
+    title: "Quality & Attention to Detail",
+    description: "Whether it's clean code, polished designs, or accurate analytics, I believe that attention to detail makes the difference between good and exceptional work.",
+    icon: CheckCircle,
+  },
+  {
+    title: "Impact-Driven Mindset",
+    description: "I measure success by real business impact. Whether it's improving conversion rates, reducing operational costs, or enhancing user satisfaction, I focus on outcomes that matter.",
     icon: Heart,
   },
 ];
 
 const testimonials = [
   {
-    quote: "ClimateAI helped us cut forecasting time in half while improving accuracy.",
-    author: "Dr. Sarah Chen",
-    company: "Global Weather Systems",
+    quote: "Kavin's analytical mindset and technical skills made him invaluable to our IT operations. His Power BI dashboards transformed how we view and manage our service requests.",
+    author: "IT Leadership Team",
+    company: "Eros Group, Dubai",
   },
   {
-    quote: "Our carbon analysis was transformed through their Edge-AI sensors.",
-    author: "Mark Rodriguez",
-    company: "EcoTech Solutions",
+    quote: "Outstanding work on the ERP modules. Kavin's attention to detail and systematic approach significantly improved our operational efficiency.",
+    author: "Senior Manager",
+    company: "Crossword ERP Division",
   },
 ];
 
@@ -939,7 +939,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-              {officeLocations.map((office) => (
+              {contactInfo.map((office) => (
                 <Card key={office.city} className="bg-white/5 backdrop-blur">
                   <CardHeader>
                     <div className="flex items-center space-x-2">
@@ -977,7 +977,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {careers.map((career) => (
+              {opportunities.map((career) => (
                 <Card key={career.title} className="bg-white/5 backdrop-blur">
                   <CardHeader>
                     <div className="flex items-center space-x-2">
@@ -1017,7 +1017,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {benefits.map((benefit) => (
+              {workingPrinciples.map((benefit) => (
                 <Card key={benefit.title} className="bg-white/5 backdrop-blur">
                   <CardHeader>
                     <benefit.icon className="text-primary mb-2" size={24} />
