@@ -373,13 +373,13 @@ export default function Home() {
       new Locomotive({
         el: refScrollContainer.current ?? new HTMLElement(),
         smooth: true,
-        multiplier: 0.5,
+        multiplier: 0.8,
         class: "is-revealed",
         scrollbarContainer: false,
         scrollbarClass: 'c-scrollbar',
         getDirection: true,
         getSpeed: true,
-        lerp: 0.05,
+        lerp: 0.08,
         smartphone: {
           smooth: false
         },
@@ -512,8 +512,8 @@ export default function Home() {
 
         {/* About */}
         <section id="about" data-scroll-section>
-          <div className="my-16 flex max-w-6xl flex-col justify-start space-y-10">
-            <h2 className="py-16 pb-2 text-4xl tracking-tighter leading-normal text-foreground xl:text-5xl">
+          <div className="my-8 flex max-w-6xl flex-col justify-start space-y-10">
+            <h2 className="py-8 pb-2 text-4xl tracking-tighter leading-normal text-foreground xl:text-5xl">
               Currently pursuing B.Tech. in Computer Science at ABV-IIITM Gwalior and seeking internships in Product, Analytics, and Development starting January 2026. I enjoy collaborating across business and tech to make measurable impact through data-driven insights.
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
@@ -540,7 +540,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-16 flex flex-col justify-start space-y-10"
+            className="my-4 flex flex-col justify-start space-y-6"
           >
             <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
@@ -592,7 +592,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-scroll data-scroll-speed=".4" className="my-16">
+          <div data-scroll data-scroll-speed=".4" className="my-2">
             <span className="text-gradient clash-grotesk text-sm tracking-tighter">
               ✨ Featured Projects
             </span>
@@ -604,7 +604,7 @@ export default function Home() {
             </p>
 
             {/* Carousel */}
-            <div className="mt-14 space-y-12">
+            <div className="mt-8 space-y-8">
               {/* Product & Strategy Projects */}
               <div>
                 <h3 className="text-xl tracking-tighter text-foreground mb-6 flex items-center">
@@ -770,7 +770,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-16 flex flex-col justify-start space-y-10"
+            className="my-2 flex flex-col justify-start space-y-6"
           >
             <div className="grid items-start gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
@@ -885,7 +885,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-16 flex flex-col justify-start space-y-16"
+            className="my-2 flex flex-col justify-start space-y-8"
           >
             {/* Header */}
             <div className="text-center">
