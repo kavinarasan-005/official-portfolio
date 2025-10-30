@@ -774,92 +774,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Information */}
-        <section id="locations" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-3">
-              <div className="flex flex-col py-6 xl:p-6">
-                <h2 className="text-4xl font-medium tracking-tight">
-                  Get In
-                  <br />
-                  <span className="text-gradient clash-grotesk tracking-normal">
-                    Touch
-                  </span>
-                </h2>
-                <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Let's connect and explore opportunities to work together.
-                </p>
-              </div>
-              {contactInfo.map((office) => (
-                <div
-                  key={office.city}
-                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[280px]"
-                >
-                  <div className="flex flex-col items-start">
-                    <office.icon className="mb-6 text-primary" size={20} />
-                    <span className="text-lg tracking-tight text-foreground">
-                      {office.city}
-                    </span>
-                  </div>
-                  <div className="mt-2">
-                    <p className="tracking-tighter text-muted-foreground mb-4">{office.address}</p>
-                    <Link href={`mailto:${office.email}`} className="text-primary hover:underline text-sm">
-                      {office.email}
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Career Opportunities */}
-        <section id="careers" data-scroll-section>
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="my-24 flex flex-col justify-start space-y-10"
-          >
-            <div className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight xl:text-6xl">
-                Seeking
-                <span className="text-gradient clash-grotesk tracking-normal"> Opportunities</span>
-              </h2>
-              <p className="mt-2 tracking-tighter text-secondary-foreground">
-                Available for internships starting January 2026.
-              </p>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-              {opportunities.map((career) => (
-                <Card key={career.title} className="bg-white/5 backdrop-blur">
-                  <CardHeader>
-                    <div className="flex items-center space-x-2">
-                      <career.icon className="text-primary" size={20} />
-                      <CardTitle className="text-lg">{career.title}</CardTitle>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm">
-                      <MapPin className="text-muted-foreground" size={16} />
-                      <span className="text-muted-foreground">{career.location}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm font-semibold text-primary mb-2">{career.requirement}</p>
-                    <p className="text-muted-foreground">{career.experience}</p>
-                    <Button className="mt-4 w-full">
-                      Apply Now <ArrowRight className="ml-2" size={16} />
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Working Principles */}
         <section id="benefits" data-scroll-section>
@@ -908,26 +823,113 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16 text-center xl:py-24"
+            className="flex flex-col justify-start space-y-16"
           >
-            <h2 className="text-4xl font-medium tracking-tighter xl:text-6xl">
-              Let&apos;s{" "}
-              <span className="text-gradient clash-grotesk">collaborate.</span>
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
-            </p>
-            <div className="mt-6 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-              <Link href="mailto:kavinarasan2019@gmail.com" passHref>
-                <Button>
-                  Get in touch <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="/resume.pdf" target="_blank" passHref>
-                <Button variant="outline">
-                  Download Resume <FileText className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
+            {/* Header */}
+            <div className="text-center">
+              <h2 className="text-4xl font-medium tracking-tighter xl:text-6xl">
+                Let&apos;s{" "}
+                <span className="text-gradient clash-grotesk">collaborate.</span>
+              </h2>
+              <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
+                Ready to work together? I'm available for internships starting January 2026 and always open to discuss exciting projects.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="grid items-center gap-1.5 md:grid-cols-2 xl:grid-cols-4">
+              {contactInfo.map((contact) => (
+                <div
+                  key={contact.city}
+                  className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[200px]"
+                >
+                  <div className="flex flex-col items-start">
+                    <contact.icon className="mb-4 text-primary" size={20} />
+                    <span className="text-lg tracking-tight text-foreground">
+                      {contact.city}
+                    </span>
+                  </div>
+                  <div className="mt-2">
+                    <p className="tracking-tighter text-muted-foreground mb-2 text-sm">{contact.address}</p>
+                    {contact.city === "Resume" ? (
+                      <Link href="/resume.pdf" target="_blank" className="text-primary hover:underline text-sm">
+                        {contact.email}
+                      </Link>
+                    ) : contact.city === "LinkedIn" ? (
+                      <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="text-primary hover:underline text-sm">
+                        {contact.email}
+                      </Link>
+                    ) : contact.city === "GitHub" ? (
+                      <Link href="https://github.com/kavinarasan-005" target="_blank" className="text-primary hover:underline text-sm">
+                        {contact.email}
+                      </Link>
+                    ) : (
+                      <Link href={`mailto:${contact.email}`} className="text-primary hover:underline text-sm">
+                        {contact.email}
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Seeking Opportunities */}
+            <div className="rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl font-medium tracking-tight xl:text-5xl">
+                  Seeking
+                  <span className="text-gradient clash-grotesk tracking-normal"> Opportunities</span>
+                </h3>
+                <p className="mt-2 tracking-tighter text-secondary-foreground">
+                  Available for internships starting January 2026.
+                </p>
+              </div>
+              
+              <div className="grid gap-6 md:grid-cols-1 xl:grid-cols-3">
+                {opportunities.map((career) => (
+                  <div
+                    key={career.title}
+                    className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[240px]"
+                  >
+                    <div className="flex flex-col items-start w-full">
+                      <career.icon className="mb-4 text-primary" size={20} />
+                      <span className="text-lg tracking-tight text-foreground mb-2">
+                        {career.title}
+                      </span>
+                      <div className="flex items-center space-x-2 text-sm mb-3">
+                        <MapPin className="text-muted-foreground" size={14} />
+                        <span className="text-muted-foreground">{career.location}</span>
+                      </div>
+                      <p className="text-sm font-semibold text-primary mb-3">{career.requirement}</p>
+                    </div>
+                    <div className="w-full">
+                      <p className="text-muted-foreground text-sm mb-4">{career.experience}</p>
+                      <Button 
+                        className="w-full"
+                        onClick={() => window.location.href = 'mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity - ' + career.title}
+                      >
+                        Get In Touch <ChevronRight className="ml-1 h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center">
+              <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center">
+                <Link href="mailto:kavinarasan2019@gmail.com" passHref>
+                  <Button size="lg">
+                    Start a Conversation <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link href="/resume.pdf" target="_blank" passHref>
+                  <Button variant="outline" size="lg">
+                    Download Resume <FileText className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
