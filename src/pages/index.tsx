@@ -592,7 +592,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div data-scroll data-scroll-speed=".4" className="my-2">
+          <div data-scroll data-scroll-speed=".4" className="-mt-8 mb-2">
             <span className="text-gradient clash-grotesk text-sm tracking-tighter">
               ✨ Featured Projects
             </span>
@@ -770,7 +770,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-2 flex flex-col justify-start space-y-6"
+            className="-mt-8 mb-2 flex flex-col justify-start space-y-6"
           >
             <div className="grid items-start gap-1.5 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col py-6 xl:p-6">
@@ -885,7 +885,7 @@ export default function Home() {
             data-scroll
             data-scroll-speed=".4"
             data-scroll-position="top"
-            className="my-2 flex flex-col justify-start space-y-8"
+            className="-mt-8 mb-2 flex flex-col justify-start space-y-8"
           >
             {/* Header */}
             <div className="text-center">
@@ -901,85 +901,122 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Main Contact Content */}
-            <div className="max-w-4xl mx-auto w-full">
-              {/* Quick Contact Links */}
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 mb-12">
-                <Link href="mailto:kavinarasan2019@gmail.com" className="group">
-                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
-                    <div className="flex flex-col items-start">
-                      <Mail className="mb-3 text-primary" size={20} />
-                      <span className="text-sm font-medium tracking-tighter text-foreground">Email</span>
-                    </div>
-                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">kavinarasan2019@gmail.com</span>
-                  </div>
-                </Link>
-                
-                <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="group">
-                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
-                    <div className="flex flex-col items-start">
-                      <Linkedin className="mb-3 text-primary" size={20} />
-                      <span className="text-sm font-medium tracking-tighter text-foreground">LinkedIn</span>
-                    </div>
-                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">Connect professionally</span>
-                  </div>
-                </Link>
-                
-                <Link href="https://github.com/kavinarasan-005" target="_blank" className="group">
-                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
-                    <div className="flex flex-col items-start">
-                      <Code2 className="mb-3 text-primary" size={20} />
-                      <span className="text-sm font-medium tracking-tighter text-foreground">GitHub</span>
-                    </div>
-                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">View my code</span>
-                  </div>
-                </Link>
-                
-                <Link href="/resume.pdf" target="_blank" className="group">
-                  <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-8 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md min-h-[120px]">
-                    <div className="flex flex-col items-start">
-                      <FileText className="mb-3 text-primary" size={20} />
-                      <span className="text-sm font-medium tracking-tighter text-foreground">Resume</span>
-                    </div>
-                    <span className="mt-2 text-xs tracking-tight text-muted-foreground">Download PDF</span>
-                  </div>
-                </Link>
+            {/* Contact Grid - Matching Website Design */}
+            <div className="grid items-start gap-1.5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="flex flex-col py-6 xl:p-6">
+                <h2 className="text-4xl tracking-tighter">
+                  Let&apos;s
+                  <br />
+                  <span className="text-gradient clash-grotesk">
+                    Connect
+                  </span>
+                </h2>
+                <p className="mt-2 tracking-tight text-secondary-foreground">
+                  Ready to work together? Available for internships starting January 2026.
+                </p>
               </div>
 
-              {/* Opportunities Section */}
-              <div className="text-center rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:bg-white/10 hover:shadow-md">
-                <h3 className="text-2xl tracking-tighter mb-3">
-                  Currently Seeking
-                  <span className="text-gradient clash-grotesk"> Opportunities</span>
-                </h3>
-                <p className="text-muted-foreground mb-6 tracking-tight">
-                  Available for internships starting January 2026
-                </p>
-                
-                {/* Opportunity Tags */}
-                <div className="flex flex-wrap justify-center gap-2 mb-8">
-                  {opportunities.map((career, index) => (
-                    <div
-                      key={career.title}
-                      className="flex items-center space-x-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-xs transition-all duration-300 hover:bg-primary/20"
-                    >
-                      <career.icon className="text-primary" size={14} />
-                      <span className="text-foreground font-medium">{career.title.replace(' Intern', '')}</span>
-                    </div>
-                  ))}
+              {/* Email Contact */}
+              <Link href="mailto:kavinarasan2019@gmail.com" className="group">
+                <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                  <div className="flex flex-col items-start">
+                    <Mail className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tighter text-foreground">
+                      Email Communication
+                    </span>
+                  </div>
+                  <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                    Direct email for project discussions, internship opportunities, and professional inquiries. Quick response guaranteed.
+                  </span>
+                  <div className="mt-4 text-xs text-primary font-medium">
+                    kavinarasan2019@gmail.com • Professional inquiries
+                  </div>
                 </div>
+              </Link>
 
-                {/* Location Info */}
-                <div className="flex items-center justify-center space-x-2 mb-6 text-sm text-muted-foreground">
-                  <MapPin className="text-primary" size={16} />
-                  <span>Based in Dubai, UAE • Available for Remote & On-site Work</span>
+              {/* LinkedIn */}
+              <Link href="https://linkedin.com/in/kavinarasan" target="_blank" className="group">
+                <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                  <div className="flex flex-col items-start">
+                    <Linkedin className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tighter text-foreground">
+                      Professional Network
+                    </span>
+                  </div>
+                  <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                    Connect on LinkedIn for professional networking, career updates, and industry insights. Let's build meaningful connections.
+                  </span>
+                  <div className="mt-4 text-xs text-primary font-medium">
+                    linkedin.com/in/kavinarasan • Professional updates
+                  </div>
                 </div>
+              </Link>
 
-                {/* CTA Button */}
-                <Link href="mailto:kavinarasan2019@gmail.com?subject=Internship Opportunity" passHref>
-                  <Button size="lg" className="px-8 py-3 text-base font-medium">
-                    Start a Conversation <ChevronRight className="ml-2 h-5 w-5" />
-                  </Button>
+              {/* GitHub */}
+              <Link href="https://github.com/kavinarasan-005" target="_blank" className="group">
+                <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                  <div className="flex flex-col items-start">
+                    <Code2 className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tighter text-foreground">
+                      Code Repository
+                    </span>
+                  </div>
+                  <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                    Explore my open-source projects, contributions, and code samples. Dive into technical implementations and development journey.
+                  </span>
+                  <div className="mt-4 text-xs text-primary font-medium">
+                    github.com/kavinarasan-005 • Open source projects
+                  </div>
+                </div>
+              </Link>
+
+              {/* Resume */}
+              <Link href="/resume.pdf" target="_blank" className="group">
+                <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                  <div className="flex flex-col items-start">
+                    <FileText className="mb-6 text-primary" size={20} />
+                    <span className="text-lg tracking-tighter text-foreground">
+                      Professional Resume
+                    </span>
+                  </div>
+                  <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                    Download detailed resume with complete work experience, projects, skills, and achievements. Comprehensive professional overview.
+                  </span>
+                  <div className="mt-4 text-xs text-primary font-medium">
+                    PDF Download • Complete professional profile
+                  </div>
+                </div>
+              </Link>
+
+              {/* Opportunities */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Rocket className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Current Availability
+                  </span>
+                </div>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  Actively seeking Product Management, Business Analytics, and Software Development internship opportunities starting January 2026.
+                </span>
+                <div className="mt-4 text-xs text-primary font-medium">
+                  Dubai, UAE • Remote/Hybrid • Full-time internships
+                </div>
+              </div>
+
+              {/* Quick Contact */}
+              <div className="flex flex-col items-start justify-between rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md h-[280px]">
+                <div className="flex flex-col items-start">
+                  <Activity className="mb-6 text-primary" size={20} />
+                  <span className="text-lg tracking-tighter text-foreground">
+                    Let's Collaborate
+                  </span>
+                </div>
+                <span className="mt-2 tracking-tight text-muted-foreground flex-1">
+                  Open to discussing exciting projects, internship opportunities, freelance work, and collaborative ventures. Always ready for new challenges.
+                </span>
+                <Link href="mailto:kavinarasan2019@gmail.com?subject=Let's Collaborate" className="mt-4 text-xs text-primary font-medium hover:underline">
+                  Start a conversation →
                 </Link>
               </div>
             </div>
