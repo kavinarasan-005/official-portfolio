@@ -24,6 +24,7 @@ type NavProps = {
   href: string;
   i: number;
   className?: string;
+  onNavigate?: () => void;
 };
 
 const variants = {
@@ -40,18 +41,28 @@ const navLinks = [
   { href: "#home", text: "Home" },
   { href: "#about", text: "About" },
   { href: "#technologies", text: "Skills" },
+  { href: "#experience", text: "Experience" },
   { href: "#projects", text: "Projects" },
   { href: "#expertise", text: "Expertise" },
   { href: "#contact", text: "Contact" },
 ];
 
-function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+function handleClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, onNavigate?: () => void) {
+  e.preventDefault();
+  e.stopPropagation();
   const href = e.currentTarget.getAttribute("href");
 
   if (href && href.startsWith("#")) {
-    e.preventDefault();
     const section = document.querySelector(href);
-    scrollTo(section);
+    if (section) {
+      scrollTo(section);
+      // Call onNavigate callback (e.g., to close mobile menu)
+      if (onNavigate) {
+        onNavigate();
+      }
+    } else {
+      console.warn('Section not found:', href);
+    }
   }
 }
 
@@ -67,7 +78,7 @@ function NavItem(props: NavProps) {
     >
       <a
         href={props.href}
-        onClick={handleClick}
+        onClick={(e) => handleClick(e, props.onNavigate)}
         className={cn(props.i === 0 && "nav-active", "nav-link")}
       >
         {props.text}
@@ -208,14 +219,14 @@ export default function Container(props: ContainerProps) {
                 {/* Links */}
                 <ul className="flex min-h-fit w-full flex-col items-start space-y-6 px-[22px] py-[58px]">
                   {navLinks.map((link, i) => (
-                    <button key={link.href} onClick={() => setIsOpen(false)}>
-                      <NavItem
-                        href={link.href}
-                        text={link.text}
-                        i={i}
-                        className="text-xl"
-                      />
-                    </button>
+                    <NavItem
+                      key={link.href}
+                      href={link.href}
+                      text={link.text}
+                      i={i}
+                      className="text-xl"
+                      onNavigate={() => setIsOpen(false)}
+                    />
                   ))}
                 </ul>
 
