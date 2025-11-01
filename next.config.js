@@ -13,7 +13,15 @@ const config = withPWA({
   },
   experimental: {
     optimizeCss: true
-  }
+  },
+  eslint: {
+    // Don't fail build on warnings, only errors
+    ignoreDuringBuilds: false,
+  },
+  typescript: {
+    // Don't fail build on type errors (we've fixed the critical ones)
+    ignoreBuildErrors: false,
+  },
 });
 
 export default config;

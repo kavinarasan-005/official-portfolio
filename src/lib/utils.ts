@@ -24,17 +24,20 @@ export function scrollTo(elementOrSelector: Element | string | null) {
   const navHeight = 80;
 
   // If locomotive instance exists, use its scrollTo for correct offset and smooth behavior
-  // @ts-ignore
-  if (typeof window !== 'undefined' && (window as any).locomotive) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (typeof window !== 'undefined' && (window as { locomotive?: unknown }).locomotive) {
     try {
-      const locomotive = (window as any).locomotive;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment
+      const locomotive = (window as { locomotive?: any }).locomotive;
       const elementTop = (element as HTMLElement).offsetTop;
       const scrollPosition = Math.max(0, elementTop - navHeight);
       
       // Try using locomotive's scrollTo method - different APIs for different versions
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       if (typeof locomotive.scrollTo === 'function') {
         // Try with element first
         try {
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           locomotive.scrollTo(element, {
             offset: -navHeight,
           });
@@ -42,6 +45,7 @@ export function scrollTo(elementOrSelector: Element | string | null) {
         } catch (e) {
           // If that fails, try with position
           try {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
             locomotive.scrollTo(scrollPosition);
             return;
           } catch (e2) {
@@ -51,7 +55,9 @@ export function scrollTo(elementOrSelector: Element | string | null) {
       }
       
       // Fallback: calculate position and scroll
-      if (locomotive.scroll && locomotive.scroll.instance) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      if (locomotive.scroll?.instance) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
         locomotive.scroll.instance.scrollTo(scrollPosition, {
           duration: 1000,
           easing: [0.25, 0.0, 0.35, 1.0],

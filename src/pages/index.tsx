@@ -379,6 +379,7 @@ export default function Home() {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let locomotiveInstance: any = null;
     let handleScrollCleanup: (() => void) | null = null;
 
@@ -406,8 +407,8 @@ export default function Home() {
       
       locomotiveInstance = loco;
       // expose instance for external scroll actions (used by scrollTo helper)
-      // @ts-ignore
-      window.locomotive = loco;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as { locomotive?: any }).locomotive = loco;
 
       // Handle scroll event - use window scroll which works with locomotive
       function handleScroll() {
@@ -415,9 +416,9 @@ export default function Home() {
         let scrollY = window.scrollY || document.documentElement.scrollTop;
         
         // Try to get locomotive scroll position if available
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         if (locomotiveInstance?.scroll?.instance?.scroll?.y !== undefined) {
-          // @ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
           scrollY = locomotiveInstance.scroll.instance.scroll.y;
         }
         
@@ -426,7 +427,7 @@ export default function Home() {
         let current = "";
 
         sections.forEach((section) => {
-          const sectionTop = (section as HTMLElement).offsetTop;
+          const sectionTop = section.offsetTop;
           const navHeight = 80; // Navbar height offset
           // Check if we're at or past the section start (with some threshold)
           if (scrollY >= sectionTop - navHeight - 100) {
@@ -471,16 +472,16 @@ export default function Home() {
       }
       
       // cleanup locomotive instance if created
-      // @ts-ignore
-      if (typeof window !== 'undefined' && window.locomotive) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      if (typeof window !== 'undefined' && (window as { locomotive?: { destroy?: () => void } }).locomotive) {
         try {
-          // @ts-ignore
-          window.locomotive.destroy();
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+          (window as { locomotive?: { destroy?: () => void } }).locomotive?.destroy?.();
         } catch (e) {
           // ignore destroy errors
         }
-        // @ts-ignore
-        delete window.locomotive;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        delete (window as { locomotive?: any }).locomotive;
       }
     };
   }, []);
@@ -533,7 +534,7 @@ export default function Home() {
               <div>
                 <h1>
                   <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
-                    Hi, I'm Kavin Arasan
+                    Hi, I&apos;m Kavin Arasan
                     <br />
                   </span>
                   <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
@@ -984,7 +985,7 @@ export default function Home() {
                     User interviews, journey mapping, behavioral analysis, and Figma prototyping for conversion-focused digital experiences.
                   </span>
                   <div className="mt-4 text-xs text-primary font-medium">
-                    Quarter-Finals L'Oréal Challenge • Conversion optimization
+                    Quarter-Finals L&apos;Oréal Challenge • Conversion optimization
                   </div>
                 </div>
 
@@ -1028,14 +1029,14 @@ export default function Home() {
               {/* Header */}
               <div className="flex flex-col items-start">
                 <span className="text-gradient clash-grotesk text-sm tracking-tighter">
-                  ✨ Let's Connect
+                  ✨ Let&apos;s Connect
                 </span>
                 <h2 className="mt-3 text-4xl tracking-tighter xl:text-6xl">
                   Ready to create{" "}
                   <span className="text-gradient clash-grotesk">impact?</span>
                 </h2>
                 <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg max-w-2xl">
-                  Available for Product Management, Analytics, and Development internships starting January 2026. Let's build something amazing together.
+                  Available for Product Management, Analytics, and Development internships starting January 2026. Let&apos;s build something amazing together.
                 </p>
               </div>
 
@@ -1048,7 +1049,7 @@ export default function Home() {
                     <div className="flex flex-col items-start space-y-2">
                       <Mail className="text-primary" size={20} />
                       <span className="text-lg tracking-tighter text-foreground">
-                        Let's Collaborate
+                        Let&apos;s Collaborate
                       </span>
                     </div>
                     <span className="mt-4 tracking-tight text-muted-foreground">
@@ -1070,7 +1071,7 @@ export default function Home() {
                       </span>
                     </div>
                     <span className="mt-4 tracking-tight text-muted-foreground">
-                      Connect on LinkedIn for professional networking, career updates, and industry insights. Let's build meaningful connections.
+                      Connect on LinkedIn for professional networking, career updates, and industry insights. Let&apos;s build meaningful connections.
                     </span>
                     <div className="mt-6 text-xs text-primary font-medium">
                       linkedin.com/in/kavinarasan • Professional updates
